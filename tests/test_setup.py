@@ -96,6 +96,72 @@ class SetupIntegrationTests(unittest.TestCase):
         self.assertFalse(self.data.exists())
         self.assertEqual(self.downloaded, [])
 
+    def test_kiwix_starter_topics_save_exact_choices_without_downloading(self):
+        expected = {
+            'medical': {'wikipedia_en_medicine_maxi', 'medlineplus.gov_en_all', 'nhs.uk_en_medicines'},
+            'preparedness': {'ready.gov_en_all', 'cd3wdproject.org_en_all', 'solar.lowtechmagazine.com_mul_all'},
+            'food': {'based.cooking_en_all'},
+        }
+        self.stdin_tty.return_value = True
+        previous = set()
+        with patch('builtins.input', return_value='n'):
+            for topic, prefixes in expected.items():
+                code, out = self.run_action('starter', 'kiwix', topic)
+                self.assertEqual(code, 0, out)
+                state = self.state()
+                self.assertEqual({x['id'] for x in state} - previous, prefixes)
+                self.assertTrue(all(x['source'] == 'kiwix' and x['prefix'] for x in state))
+                if topic == 'food':
+                    self.assertIn('Based Cooking: Recipes', out)
+                    self.assertEqual(next(x for x in state if x['id'] == 'based.cooking_en_all')['title'],
+                                     'Based Cooking: Recipes')
+                previous |= prefixes
+        self.assertEqual(self.downloaded, [])
+
+    def test_kiwix_starter_without_topic_still_selects_full_starter(self):
+        self.stdin_tty.return_value = True
+        with patch('builtins.input', return_value='n'):
+            code, out = self.run_action('starter', 'kiwix')
+        self.assertEqual(code, 0, out)
+        self.assertEqual([x['id'] for x in self.state()], app.STARTER_KIWIX)
+        self.assertEqual(self.downloaded, [])
+
+    def test_kiwix_starter_topic_preview_does_not_save_or_download(self):
+        def resolve(prefix):
+            return {'filename': prefix + '_2026-01.zim', 'download_url': 'https://example.org/' + prefix + '.zim', 'size': 123}
+        with patch.object(app.kiwix, 'resolve_prefix', side_effect=resolve):
+            code, out = self.run_action('starter', 'kiwix', 'food', preview=True)
+        self.assertEqual(code, 0, out)
+        self.assertIn('Would download: based.cooking_en_all_2026-01.zim', out)
+        self.assertFalse(self.data.exists())
+        self.assertEqual(self.downloaded, [])
+
+    def test_kiwix_starter_topic_retries_and_upgrades_through_saved_prefix(self):
+        def resolve(prefix):
+            return {'filename': prefix + '_2026-01.zim', 'download_url': 'https://example.org/old.zim', 'size': 123}
+        with patch.object(app.kiwix, 'resolve_prefix', side_effect=resolve):
+            code, out = self.run_action('starter', 'kiwix', 'food')
+            self.assertEqual(code, 0, out)
+            old = self.data/'kiwix/based.cooking_en_all_2026-01.zim'
+            old.unlink()
+            code, out = self.run_action('download')
+            self.assertEqual(code, 0, out)
+            self.assertTrue(old.exists())
+        newer = {'filename': 'based.cooking_en_all_2026-02.zim', 'download_url': 'https://example.org/new.zim', 'size': 123}
+        with patch.object(app.kiwix, 'resolve_prefix', return_value=newer) as lookup:
+            code, out = self.run_action('upgrade')
+        self.assertEqual(code, 0, out)
+        lookup.assert_called_once_with('based.cooking_en_all')
+        self.assertTrue(old.exists())
+        self.assertTrue((self.data/'kiwix/based.cooking_en_all_2026-02.zim').exists())
+
+    def test_kiwix_starter_rejects_invalid_topics_and_extra_arguments(self):
+        for args in [('starter', 'kiwix', 'unknown'), ('starter', 'survivor', 'food'),
+                     ('starter', 'kiwix', 'food', 'extra')]:
+            with self.subTest(args=args), self.assertRaisesRegex(ValueError, 'Kiwix starter topic'):
+                self.run_action(*args, preview=True)
+        self.assertFalse(self.data.exists())
+
     def test_last_light_can_be_browsed_in_preview(self):
         code, out = self.run_action('browse', 'last-light', preview=True)
         self.assertEqual(code, 0, out)

@@ -38,6 +38,16 @@ If `CACHE_DATA` is already set in your terminal, it overrides the config file. R
 
 ## Add more content
 
+For a smaller Kiwix starter collection, choose a topic:
+
+```bash
+bash setup.sh starter kiwix medical
+bash setup.sh starter kiwix preparedness
+bash setup.sh starter kiwix food
+```
+
+Medical includes medicine and health references, preparedness includes emergency and practical skills guides, and food includes recipes. `bash setup.sh starter kiwix` selects all three.
+
 Kiwix content is discovered from its catalog. Survivor Library browsing uses a saved catalog, so it opens quickly. Use the setup menu to browse either one, or search for a topic:
 
 ```bash

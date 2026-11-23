@@ -45,7 +45,7 @@ class FullEstimateTests(unittest.TestCase):
         self.assertEqual(requests, [0, 2])
         transfer.assert_not_called()
         self.assertIn('~3.0 GB + 1 file with unknown sizes', out.getvalue())
-        self.assertIn('existing downloads are not deducted', out.getvalue())
+        self.assertIn('existing downloads are not deducted', out.getvalue().lower())
 
     def test_incomplete_kiwix_catalog_does_not_claim_total(self):
         replies = [b'<feed xmlns="http://www.w3.org/2005/Atom"></feed>',

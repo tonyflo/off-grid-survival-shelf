@@ -40,6 +40,20 @@ LOG = DATA / 'cache-in-case.log'
 PREVIEW = '--preview' in sys.argv
 ARGS = [x for x in sys.argv[1:] if x != '--preview']
 STARTER_KIWIX = ['wikipedia_en_medicine_maxi', 'ready.gov_en_all', 'medlineplus.gov_en_all', 'nhs.uk_en_medicines', 'cd3wdproject.org_en_all', 'solar.lowtechmagazine.com_mul_all', 'based.cooking_en_all']
+STARTER_KIWIX_TOPICS = {
+    'medical': ['wikipedia_en_medicine_maxi', 'medlineplus.gov_en_all', 'nhs.uk_en_medicines'],
+    'preparedness': ['ready.gov_en_all', 'cd3wdproject.org_en_all', 'solar.lowtechmagazine.com_mul_all'],
+    'food': ['based.cooking_en_all'],
+}
+STARTER_KIWIX_TITLES = {
+    'wikipedia_en_medicine_maxi': 'Wikipedia: Medicine',
+    'ready.gov_en_all': 'Ready.gov: Emergency Preparedness',
+    'medlineplus.gov_en_all': 'MedlinePlus',
+    'nhs.uk_en_medicines': 'NHS: Medicines',
+    'cd3wdproject.org_en_all': 'CD3WD: Practical Skills',
+    'solar.lowtechmagazine.com_mul_all': 'Low-tech Magazine',
+    'based.cooking_en_all': 'Based Cooking: Recipes',
+}
 STARTER_SURVIVOR = ['Canning.ZIP', 'Food.ZIP', 'Shelter.ZIP', 'Medical_Emergency.ZIP', 'Survival_Individual.ZIP']
 LAST_URL = 'https://bunkerbot.co.uk/downloads/last-light-survival-guide-standard.zip'
 
@@ -189,7 +203,7 @@ def show_full_library_estimate(source):
                 print('Estimated Kiwix catalog and maps size: unavailable.')
         except Exception as exc:
             print('Estimated Kiwix catalog size: unavailable ({}).'.format(exc))
-    print('This is the full library estimate; existing downloads are not deducted.')
+    print('Existing downloads are not deducted from these estimates.')
 
 
 def read_state():
@@ -895,6 +909,17 @@ def sync(state, runlist=None, update=False, ask=False):
     return 0
 
 
+def choose_source(include_all=False):
+    print('\nSources:')
+    if include_all: print('  all         Recommended content from all three sources')
+    print('  kiwix       Encyclopedias, maps, and practical guides')
+    print('  survivor    Historical books by subject')
+    print('  last-light  One offline survival guide and reference books')
+    if include_all:
+        return input('Choose all, kiwix, survivor, or last-light [all]: ').strip().lower() or 'all'
+    return input('Choose kiwix, survivor, or last-light: ').strip().lower()
+
+
 def run():
     global _catalog_cache
     _catalog_cache = None
@@ -908,13 +933,12 @@ Start:
   bash setup.sh starter                  Get the recommended starter library
 
 Add content:
-  bash setup.sh starter kiwix            Get the Kiwix starter collection
+  bash setup.sh starter kiwix [topic]    Get a Kiwix starter collection
   bash setup.sh starter survivor         Get the Survivor starter collection
   bash setup.sh starter last-light       Get Last Light
-  bash setup.sh last-light               Get Last Light
   bash setup.sh browse kiwix [topic]     Browse Kiwix or search by topic
   bash setup.sh browse survivor [topic]  Browse Survivor or search by topic
-  bash setup.sh browse last-light        Read about and get Last Light
+  bash setup.sh browse last-light        View and select the Last Light guide
   bash setup.sh kiwix all                Select all English Kiwix content
   bash setup.sh survivor all             Select the Survivor library
 
@@ -928,6 +952,8 @@ Manage your library:
   bash setup.sh upgrade                  Get updates to downloaded content
   bash setup.sh log                      Follow the log (Ctrl+C to stop)
 
+Kiwix starter topics: medical, preparedness, food. Omit topic for all three.
+Last Light is one guide; Kiwix and Survivor have many items to browse.
 Add --preview to see a plan without downloading or saving selections.
 Set your library folder in config.json (default: ./offline-library).
 See README.md for instructions and how to open files offline.''')
@@ -936,23 +962,36 @@ See README.md for instructions and how to open files offline.''')
     if command == 'status': status(state); return 0
     if not PREVIEW:
         DATA.mkdir(parents=True, exist_ok=True)
-    say('\n+-----------------------------+')
-    say('| [|||]  [|||]  [|||]  [|||] |')
-    say('+-----------------------------+')
-    say('OFF-GRID SURVIVAL SHELF')
+    say('\nOFF-GRID SURVIVAL SHELF')
     say('Build your own offline library of survival knowledge.')
     if PREVIEW: say('Preview mode: no files or selections will be changed.')
     say('Library: ' + str(DATA))
     if not command:
         if not sys.stdin.isatty(): raise RuntimeError('Run interactively for setup, or use download for saved selections.')
-        print('\nstarter: recommended library\nbrowse: add more content\ndownload: download missing selections\nupdate: refresh the catalog and sizes\nupgrade: get updates to downloaded content\nstatus: check your library\nquit: exit')
+        print('''\nNew here? Start with a recommended collection.
+
+  starter   Choose a recommended collection
+  browse    Find and select more content
+  download  Get saved selections or retry downloads
+  update    Refresh catalog listings and size estimates
+  upgrade   Check downloaded content for newer versions
+  status    See saved selections and downloaded content
+  help      Show all commands
+  quit      Exit''')
         command = input('Choose an action: ').strip().lower()
         if command == 'browse':
-            source = input('Choose kiwix, survivor, or last-light: ').strip().lower()
+            source = choose_source()
             ARGS[:] = ['browse', source]
         elif command == 'starter':
-            group = input('Choose all, kiwix, survivor, or last-light: ').strip().lower()
+            group = choose_source(include_all=True)
             ARGS[:] = ['starter', group]
+            if group == 'kiwix':
+                print('Kiwix starter topics: medical, preparedness, food.')
+                topic = input('Choose a topic (press Enter for the full starter): ').strip().lower()
+                if topic and topic != 'all': ARGS.append(topic)
+        elif command in ('help', '?'):
+            ARGS[:] = ['help']
+            return run()
         elif command == 'refresh':
             command = 'update'
             ARGS[:] = ['update']
@@ -979,9 +1018,12 @@ See README.md for instructions and how to open files offline.''')
     elif command == 'starter':
         group = ARGS[1] if len(ARGS)>1 else 'all'
         if group not in ('all','kiwix','survivor','last-light'): raise ValueError('Choose all, kiwix, survivor, or last-light.')
+        if len(ARGS) > 3 or (len(ARGS) == 3 and (group != 'kiwix' or ARGS[2] not in STARTER_KIWIX_TOPICS)):
+            raise ValueError('Choose a Kiwix starter topic: medical, preparedness, or food.')
         chosen = []
         if group in ('all','kiwix'):
-            chosen += [{'source':'kiwix','id':p,'title':p,'prefix':True} for p in STARTER_KIWIX]
+            prefixes = STARTER_KIWIX_TOPICS[ARGS[2]] if len(ARGS) == 3 else STARTER_KIWIX
+            chosen += [{'source':'kiwix','id':p,'title':STARTER_KIWIX_TITLES.get(p, p),'prefix':True} for p in prefixes]
         if group in ('all','survivor'):
             chosen += [{'source':'survivor-file','id':p,'title':p} for p in STARTER_SURVIVOR]
         if group in ('all','last-light'): chosen.append({'source':'last-light','id':'standard','title':'Last Light Standard'})
@@ -1000,12 +1042,12 @@ See README.md for instructions and how to open files offline.''')
         chosen = [{'source':command+'-all','id':'all','title':title}]
     elif command == 'browse':
         if len(ARGS) == 1 and sys.stdin.isatty():
-            ARGS.append(input('Choose kiwix, survivor, or last-light: ').strip().lower())
+            ARGS.append(choose_source())
         if len(ARGS)<2 or ARGS[1] not in ('kiwix','survivor','last-light'):
             raise ValueError('Choose browse kiwix, browse survivor, or browse last-light.')
         source = ARGS[1]; topic = ' '.join(ARGS[2:]).strip()
         if source == 'last-light':
-            print('Last Light Standard: an offline survival guide and reference books.')
+            print('Last Light is one offline survival guide with reference books.')
             print('Details: https://bunkerbot.co.uk/download.html')
             chosen = [{'source':'last-light','id':'standard','title':'Last Light Standard'}]
         else:
