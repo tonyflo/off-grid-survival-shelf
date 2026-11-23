@@ -79,16 +79,28 @@ bash setup.sh update survivor food
 
 Sizes marked `~` come from the saved catalog or publisher and may have changed since they were checked. Other Kiwix results use sizes from Kiwix's catalog. The actual size is shown when a download starts, if the server provides it. `update` refreshes this information; `upgrade` checks for newer content.
 
-To select the entire Survivor Library or a Kiwix category or full English catalog:
+To select an entire Kiwix category or the full English catalog, run:
+
+```bash
+bash setup.sh download kiwix
+```
+
+Enter a category name from the list, or press Enter to select the full catalog, including uncategorized items and separately indexed maps. You can also specify a category directly, or select the full catalog:
+
+```bash
+bash setup.sh download kiwix wikipedia
+bash setup.sh download kiwix all
+```
+
+The program shows an estimated size and asks you to confirm your selection. It then saves the selection and asks whether to download it now. If you choose not to download yet, run `bash setup.sh download` later to download all missing saved selections or retry failures. Selecting a category means future downloads can also find new items in that category.
+
+To select the entire Survivor Library, run:
 
 ```bash
 bash setup.sh survivor all
-bash setup.sh kiwix all
 ```
 
-The Kiwix command lists the publisher's categories: enter a category name to select its contents, or press Enter to select the full catalog, including uncategorized items and separately indexed maps. The selection is saved, so `download` can retry missing items and discover new items in that category. You can also specify a category directly, for example `bash setup.sh kiwix all wikipedia`.
-
-Both commands show a size estimate before you choose. Kiwix uses its current catalog; Survivor uses saved category sizes and shows a partial estimate because some sizes and individual books are missing. Survivor categories can overlap, so some ZIPs may be counted more than once. Estimates do not subtract files you already have.
+These commands show a size estimate before you choose. Kiwix uses its current catalog; Survivor uses saved category sizes and shows a partial estimate because some sizes and individual books are missing. Survivor categories can overlap, so some ZIPs may be counted more than once. Estimates do not subtract files you already have.
 
 The complete catalogs can be extremely large. Check the available space before choosing either one. `survivor all` downloads the ZIPs and individual books it finds in the publisher's category and recent-books indexes, including books outside category ZIPs. It compares filenames to avoid downloading books already in a ZIP. The publisher may have older files that aren't linked from either index; those can't be discovered automatically.
 
@@ -100,6 +112,7 @@ Add `--preview` to see what would happen without downloading or saving selection
 bash setup.sh --preview
 bash setup.sh starter last-light --preview
 bash setup.sh browse survivor food --preview
+bash setup.sh download kiwix --preview
 ```
 
 Once you have saved your selections, check on your library or retry missing downloads:

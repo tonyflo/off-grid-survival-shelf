@@ -988,7 +988,9 @@ Add content:
                                          Browse within a Kiwix category
   bash setup.sh browse survivor [topic]  Browse Survivor or search by topic
   bash setup.sh browse last-light        View and select the Last Light guide
-  bash setup.sh kiwix all [category]     Select a category or all of Kiwix
+  bash setup.sh download kiwix           Choose a Kiwix category or all
+  bash setup.sh download kiwix NAME      Select a full Kiwix category
+  bash setup.sh download kiwix all       Select the entire Kiwix catalog
   bash setup.sh survivor all             Select the Survivor library
 
 Manage your library:
@@ -1045,6 +1047,16 @@ See README.md for instructions and how to open files offline.''')
             command = 'update'
             ARGS[:] = ['update']
         elif command in ('', 'quit', 'exit', 'q'): print('Cancelled.'); return 0
+    # Keep bare download for saved selections, while allowing Kiwix batches
+    # to use the same action name. Route to the existing catalog workflow so
+    # confirmations, saved state, previews, and legacy commands stay in sync.
+    if command == 'download' and len(ARGS) > 1:
+        if ARGS[1] != 'kiwix' or len(ARGS) > 3:
+            raise ValueError('Use download [kiwix [category|all]].')
+        command = 'kiwix'
+        ARGS[:] = ['kiwix', 'all'] + ARGS[2:]
+    elif command == 'sync' and len(ARGS) > 1:
+        raise ValueError('Use sync without arguments to download saved selections.')
     known_sizes = {}
     if command in ('update', 'refresh-catalog'):
         group = ARGS[1] if len(ARGS) > 1 else 'all'

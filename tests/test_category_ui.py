@@ -29,6 +29,21 @@ sys.exit(app.main())
 
 
 class CategoryTerminalTests(unittest.TestCase):
+    def test_download_kiwix_opens_category_chooser(self):
+        with tempfile.TemporaryDirectory() as temp:
+            data = Path(temp) / 'library'
+            steps = [('Choose a category by name', b'Wikipedia\n'),
+                     ('Select this Kiwix category?', b'y\n'),
+                     ('Download these selections now?', b'n\n')]
+            code, out, completed = run_pty_steps([sys.executable, '-c', SCRIPT, 'download', 'kiwix'],
+                                                  steps, {'CACHE_DATA': str(data)})
+            self.assertEqual(completed, len(steps), out)
+            self.assertEqual(code, 0, out)
+            item = json.loads((data / 'selections.json').read_text())[0]
+            self.assertEqual((item['source'], item['category']), ('kiwix-all', 'wikipedia'))
+            self.assertIn('Estimated Kiwix category:', out)
+            self.assertFalse(list(data.rglob('*.zim')))
+
     def test_bulk_select_category_and_save_without_download(self):
         with tempfile.TemporaryDirectory() as temp:
             data = Path(temp) / 'library'
