@@ -1,0 +1,6 @@
+data/
+__pycache__/
+*.pyc
+.cache-in-case-location
+offline-library/
+config.json

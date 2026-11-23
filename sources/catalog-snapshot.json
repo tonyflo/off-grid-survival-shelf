@@ -1,0 +1,1960 @@
+{
+  "survivor_checked_at": "2026-11-20T21:33:55+00:00",
+  "survivor": [
+    {
+      "id": "accounting",
+      "title": "Accounting",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-accounting/",
+      "size": 265534665,
+      "checked_at": "2026-11-20T21:34:03+00:00"
+    },
+    {
+      "id": "aeroplanes",
+      "title": "Aeroplanes",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-aeroplanes/",
+      "size": 231530112,
+      "checked_at": "2026-11-20T21:34:03+00:00"
+    },
+    {
+      "id": "airships",
+      "title": "Airships",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-airships/",
+      "size": 160129993,
+      "checked_at": "2026-11-20T21:34:03+00:00"
+    },
+    {
+      "id": "archery",
+      "title": "Archery",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-archery/",
+      "size": 251576774,
+      "checked_at": "2026-11-20T21:34:03+00:00"
+    },
+    {
+      "id": "architecture",
+      "title": "Architecture",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-architecture/",
+      "size": 11306617193,
+      "checked_at": "2026-11-20T21:34:10+00:00"
+    },
+    {
+      "id": "astronomy",
+      "title": "Astronomy",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-astronomy/",
+      "size": 4979362648,
+      "checked_at": "2026-11-20T21:34:10+00:00"
+    },
+    {
+      "id": "baking",
+      "title": "Baking",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-baking/",
+      "size": 524179064,
+      "checked_at": "2026-11-20T21:34:10+00:00"
+    },
+    {
+      "id": "banking",
+      "title": "Banking",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-banking/",
+      "size": 1317951734,
+      "checked_at": "2026-11-20T21:34:10+00:00"
+    },
+    {
+      "id": "basketry",
+      "title": "Basketry",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-basketry/",
+      "size": 459506657,
+      "checked_at": "2026-11-20T21:34:18+00:00"
+    },
+    {
+      "id": "bee_journal_american",
+      "title": "Bee Journal American",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-bee_journal_american/",
+      "size": 3115941950,
+      "checked_at": "2026-11-20T21:34:18+00:00"
+    },
+    {
+      "id": "bee_journal_british",
+      "title": "Bee Journal British",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-bee_journal_british/",
+      "size": 2428447237,
+      "checked_at": "2026-11-20T21:34:18+00:00"
+    },
+    {
+      "id": "beekeeping",
+      "title": "Beekeeping",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-beekeeping/",
+      "size": 1521700429,
+      "checked_at": "2026-11-20T21:34:18+00:00"
+    },
+    {
+      "id": "berries",
+      "title": "Berries",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-berries/",
+      "size": 241800597,
+      "checked_at": "2026-11-20T21:34:26+00:00"
+    },
+    {
+      "id": "boilermaker",
+      "title": "Boilermaker",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-boilermaker/",
+      "size": 146751208,
+      "checked_at": "2026-11-20T21:34:26+00:00"
+    },
+    {
+      "id": "bookbinding",
+      "title": "Bookbinding",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-bookbinding/",
+      "size": 334711564,
+      "checked_at": "2026-11-20T21:34:26+00:00"
+    },
+    {
+      "id": "books_for_boys_and_girls",
+      "title": "Books for Boys and Girls",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-books_for_boys_and_girls/",
+      "size": 1339007278,
+      "checked_at": "2026-11-20T21:34:26+00:00"
+    },
+    {
+      "id": "books_for_young_children",
+      "title": "Books for Young Children",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-books_for_young_children/",
+      "size": 2273973330,
+      "checked_at": "2026-11-20T21:34:33+00:00"
+    },
+    {
+      "id": "botany",
+      "title": "Botany",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-botany/",
+      "size": 3035061598,
+      "checked_at": "2026-11-20T21:34:33+00:00"
+    },
+    {
+      "id": "boy_scout_manuals",
+      "title": "Boy Scout Manuals",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-boy_scout_manuals/",
+      "size": 629959580,
+      "checked_at": "2026-11-20T21:34:33+00:00"
+    },
+    {
+      "id": "brewing_and_distilling",
+      "title": "Brewing and Distilling",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-brewing_and_distilling/",
+      "size": 475770318,
+      "checked_at": "2026-11-20T21:34:33+00:00"
+    },
+    {
+      "id": "bridges_and_dams",
+      "title": "Bridges and Dams",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-bridges_and_dams/",
+      "size": 277842147,
+      "checked_at": "2026-11-20T21:34:42+00:00"
+    },
+    {
+      "id": "butchering",
+      "title": "Butchering",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-butchering/",
+      "size": 350596591,
+      "checked_at": "2026-11-20T21:34:42+00:00"
+    },
+    {
+      "id": "canning",
+      "title": "Canning",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-canning/",
+      "size": 297462299,
+      "checked_at": "2026-11-20T21:34:42+00:00"
+    },
+    {
+      "id": "cheese_and_butter",
+      "title": "Cheese and Butter",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-cheese_and_butter/",
+      "size": 360490909,
+      "checked_at": "2026-11-20T21:34:42+00:00"
+    },
+    {
+      "id": "chemistry",
+      "title": "Chemistry",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-chemistry/",
+      "size": 1108112043,
+      "checked_at": "2026-11-20T21:34:49+00:00"
+    },
+    {
+      "id": "christmas",
+      "title": "Christmas",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-christmas/",
+      "size": 209385783,
+      "checked_at": "2026-11-20T21:34:49+00:00"
+    },
+    {
+      "id": "clockmaking",
+      "title": "Clockmaking",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-clockmaking/",
+      "size": 749108886,
+      "checked_at": "2026-11-20T21:34:49+00:00"
+    },
+    {
+      "id": "coal_and_mining",
+      "title": "Coal and Mining",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-coal_and_mining/",
+      "size": 4622956878,
+      "checked_at": "2026-11-20T21:34:49+00:00"
+    },
+    {
+      "id": "coffee_and_tea",
+      "title": "Coffee and Tea",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-coffee_and_tea/",
+      "size": 1404931801,
+      "checked_at": "2026-11-20T21:34:58+00:00"
+    },
+    {
+      "id": "concrete",
+      "title": "Concrete",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-concrete/",
+      "size": 1101970427,
+      "checked_at": "2026-11-20T21:34:58+00:00"
+    },
+    {
+      "id": "conduct_of_life",
+      "title": "Conduct of Life",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-conduct_of_life/",
+      "size": 890301580,
+      "checked_at": "2026-11-20T21:34:58+00:00"
+    },
+    {
+      "id": "construction",
+      "title": "Construction",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-construction/",
+      "size": 528161613,
+      "checked_at": "2026-11-20T21:34:58+00:00"
+    },
+    {
+      "id": "cooking_and_cookbooks",
+      "title": "Cooking and Cookbooks",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-cooking_and_cookbooks/",
+      "size": 1118448019,
+      "checked_at": "2026-11-20T21:35:07+00:00"
+    },
+    {
+      "id": "cotton",
+      "title": "Cotton",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-cotton/",
+      "size": 524782273,
+      "checked_at": "2026-11-20T21:35:07+00:00"
+    },
+    {
+      "id": "cycles_bi_tri_motor",
+      "title": "Cycles Bi Tri Motor",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-cycles_bi_tri_motor/",
+      "size": 752280906,
+      "checked_at": "2026-11-20T21:35:07+00:00"
+    },
+    {
+      "id": "dentistry",
+      "title": "Dentistry",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-dentistry/",
+      "size": 757771733,
+      "checked_at": "2026-11-20T21:35:07+00:00"
+    },
+    {
+      "id": "dogs",
+      "title": "Dogs",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-dogs/",
+      "size": 1609533262,
+      "checked_at": "2026-11-20T21:35:14+00:00"
+    },
+    {
+      "id": "drilling",
+      "title": "Drilling",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-drilling/",
+      "size": 143209522,
+      "checked_at": "2026-11-20T21:35:14+00:00"
+    },
+    {
+      "id": "economics",
+      "title": "Economics",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-economics/",
+      "size": 1469026374,
+      "checked_at": "2026-11-20T21:35:14+00:00"
+    },
+    {
+      "id": "embalming",
+      "title": "Embalming",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-embalming/",
+      "size": 123188214,
+      "checked_at": "2026-11-20T21:35:14+00:00"
+    },
+    {
+      "id": "encyclopedias",
+      "title": "Encyclopedias",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-encyclopedias/",
+      "size": 8042557286,
+      "checked_at": "2026-11-20T21:35:22+00:00"
+    },
+    {
+      "id": "engineering_drainage",
+      "title": "Engineering Drainage",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-engineering_drainage/",
+      "size": 166813391,
+      "checked_at": "2026-11-20T21:35:22+00:00"
+    },
+    {
+      "id": "engineering_electrical",
+      "title": "Engineering Electrical",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-engineering_electrical/",
+      "size": 1263831774,
+      "checked_at": "2026-11-20T21:35:22+00:00"
+    },
+    {
+      "id": "engineering_general",
+      "title": "Engineering General",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-engineering_general/",
+      "size": 1625012766,
+      "checked_at": "2026-11-20T21:35:22+00:00"
+    },
+    {
+      "id": "engineering_hydraulics",
+      "title": "Engineering Hydraulics",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-engineering_hydraulics/",
+      "size": 140835466,
+      "checked_at": "2026-11-20T21:35:30+00:00"
+    },
+    {
+      "id": "engraving_and_woodcuts",
+      "title": "Engraving and Woodcuts",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-engraving_and_woodcuts/",
+      "size": 973079282,
+      "checked_at": "2026-11-20T21:35:30+00:00"
+    },
+    {
+      "id": "ethics",
+      "title": "Ethics",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-ethics/",
+      "size": 696368565,
+      "checked_at": "2026-11-20T21:35:30+00:00"
+    },
+    {
+      "id": "farming",
+      "title": "Farming",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-farming/",
+      "size": 4909828340,
+      "checked_at": "2026-11-20T21:35:30+00:00"
+    },
+    {
+      "id": "farming_corn",
+      "title": "Farming Corn",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-farming_corn/",
+      "size": 1223665535,
+      "checked_at": "2026-11-20T21:35:37+00:00"
+    },
+    {
+      "id": "farming_cotton",
+      "title": "Farming Cotton",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-farming_cotton/",
+      "size": 524782273,
+      "checked_at": "2026-11-20T21:35:37+00:00"
+    },
+    {
+      "id": "farming_fish",
+      "title": "Farming Fish",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-farming_fish/",
+      "size": 155359554,
+      "checked_at": "2026-11-20T21:35:37+00:00"
+    },
+    {
+      "id": "farming_grapes",
+      "title": "Farming Grapes",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-farming_grapes/",
+      "size": 781632738,
+      "checked_at": "2026-11-20T21:35:37+00:00"
+    },
+    {
+      "id": "farming_potato_and_sweet_potato",
+      "title": "Farming Potato and Sweet Potato",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-farming_potato_and_sweet_potato/",
+      "size": 770375541,
+      "checked_at": "2026-11-20T21:35:45+00:00"
+    },
+    {
+      "id": "firearms",
+      "title": "Firearms",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-firearms/",
+      "size": 702678710,
+      "checked_at": "2026-11-20T21:35:45+00:00"
+    },
+    {
+      "id": "firearms_manuals",
+      "title": "Firearms Manuals",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-firearms_manuals/",
+      "size": 1299413517,
+      "checked_at": "2026-11-20T21:35:45+00:00"
+    },
+    {
+      "id": "fishing",
+      "title": "Fishing",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-fishing/",
+      "size": 1127066132,
+      "checked_at": "2026-11-20T21:35:45+00:00"
+    },
+    {
+      "id": "food",
+      "title": "Food",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-food/",
+      "size": 56428559,
+      "checked_at": "2026-11-20T21:35:54+00:00"
+    },
+    {
+      "id": "forestry",
+      "title": "Forestry",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-forestry/",
+      "size": 934111168,
+      "checked_at": "2026-11-20T21:35:54+00:00"
+    },
+    {
+      "id": "forging_and_casting",
+      "title": "Forging and Casting",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-forging_and_casting/",
+      "size": 2423594287,
+      "checked_at": "2026-11-20T21:35:54+00:00"
+    },
+    {
+      "id": "formulas",
+      "title": "Formulas",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-formulas/",
+      "size": 969317286,
+      "checked_at": "2026-11-20T21:35:54+00:00"
+    },
+    {
+      "id": "fuels",
+      "title": "Fuels",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-fuels/",
+      "size": 2610791155,
+      "checked_at": "2026-11-20T21:36:03+00:00"
+    },
+    {
+      "id": "geodesy",
+      "title": "Geodesy",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-geodesy/",
+      "size": 488369348,
+      "checked_at": "2026-11-20T21:36:03+00:00"
+    },
+    {
+      "id": "geography",
+      "title": "Geography",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-geography/",
+      "size": 642149167,
+      "checked_at": "2026-11-20T21:36:03+00:00"
+    },
+    {
+      "id": "glassmaking",
+      "title": "Glassmaking",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-glassmaking/",
+      "size": 443873764,
+      "checked_at": "2026-11-20T21:36:03+00:00"
+    },
+    {
+      "id": "grapes_wine_raisins",
+      "title": "Grapes Wine Raisins",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-grapes_wine_raisins/",
+      "size": 781632738,
+      "checked_at": "2026-11-20T21:36:10+00:00"
+    },
+    {
+      "id": "great_books",
+      "title": "Great Books",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-great_books/",
+      "size": 4927497859,
+      "checked_at": "2026-11-20T21:36:10+00:00"
+    },
+    {
+      "id": "gunpowder_and_explosives",
+      "title": "Gunpowder and Explosives",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-gunpowder_and_explosives/",
+      "size": 285815948,
+      "checked_at": "2026-11-20T21:36:10+00:00"
+    },
+    {
+      "id": "hatmaking",
+      "title": "Hatmaking",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-hatmaking/",
+      "size": 118051690,
+      "checked_at": "2026-11-20T21:36:10+00:00"
+    },
+    {
+      "id": "heating",
+      "title": "Heating",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-heating/",
+      "size": 1690546484,
+      "checked_at": "2026-11-20T21:36:18+00:00"
+    },
+    {
+      "id": "heavy_industrial_machinery",
+      "title": "Heavy Industrial Machinery",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-heavy_industrial_machinery/",
+      "size": 1207247633,
+      "checked_at": "2026-11-20T21:36:18+00:00"
+    },
+    {
+      "id": "hemp_flax",
+      "title": "Hemp Flax",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-hemp_flax/",
+      "size": 204382495,
+      "checked_at": "2026-11-20T21:36:18+00:00"
+    },
+    {
+      "id": "herbalism",
+      "title": "Herbalism",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-herbalism/",
+      "size": 2202022236,
+      "checked_at": "2026-11-20T21:36:18+00:00"
+    },
+    {
+      "id": "history_american",
+      "title": "History American",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-history_american/",
+      "size": 1995229334,
+      "checked_at": "2026-11-20T21:36:26+00:00"
+    },
+    {
+      "id": "history_world",
+      "title": "History World",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-history_world/",
+      "size": 657714492,
+      "checked_at": "2026-11-20T21:36:26+00:00"
+    },
+    {
+      "id": "home_economics",
+      "title": "Home Economics",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-home_economics/",
+      "size": 1491594005,
+      "checked_at": "2026-11-20T21:36:26+00:00"
+    },
+    {
+      "id": "horses",
+      "title": "Horses",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-horses/",
+      "size": 3464680940,
+      "checked_at": "2026-11-20T21:36:26+00:00"
+    },
+    {
+      "id": "journalism",
+      "title": "Journalism",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-journalism/",
+      "size": 1139104967,
+      "checked_at": "2026-11-20T21:36:35+00:00"
+    },
+    {
+      "id": "knitting_lace_needlepoint",
+      "title": "Knitting Lace Needlepoint",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-knitting_lace_needlepoint/",
+      "size": 422951706,
+      "checked_at": "2026-11-20T21:36:35+00:00"
+    },
+    {
+      "id": "languages",
+      "title": "Languages",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-languages/",
+      "size": 154154873,
+      "checked_at": "2026-11-20T21:36:35+00:00"
+    },
+    {
+      "id": "laundry",
+      "title": "Laundry",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-laundry/",
+      "size": 347503603,
+      "checked_at": "2026-11-20T21:36:35+00:00"
+    },
+    {
+      "id": "law",
+      "title": "Law",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-law/",
+      "size": 10356184188,
+      "checked_at": "2026-11-20T21:36:44+00:00"
+    },
+    {
+      "id": "leather",
+      "title": "Leather",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-leather/",
+      "size": 874200477,
+      "checked_at": "2026-11-20T21:36:44+00:00"
+    },
+    {
+      "id": "leisure_games_and_sports",
+      "title": "Leisure Games and Sports",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-leisure_games_and_sports/",
+      "size": 1214272952,
+      "checked_at": "2026-11-20T21:36:44+00:00"
+    },
+    {
+      "id": "leisure_recreation_magazine",
+      "title": "Leisure Recreation Magazine",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-leisure_recreation_magazine/",
+      "size": 4421342560,
+      "checked_at": "2026-11-20T21:36:44+00:00"
+    },
+    {
+      "id": "leisure_whist",
+      "title": "Leisure Whist",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-leisure_whist/",
+      "size": 212219922,
+      "checked_at": "2026-11-20T21:36:53+00:00"
+    },
+    {
+      "id": "lithography",
+      "title": "Lithography",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-lithography/",
+      "size": 130716599,
+      "checked_at": "2026-11-20T21:36:53+00:00"
+    },
+    {
+      "id": "livestock_cattle",
+      "title": "Livestock Cattle",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-livestock_cattle/",
+      "size": 362190879,
+      "checked_at": "2026-11-20T21:36:53+00:00"
+    },
+    {
+      "id": "livestock_rabbits_and_cavies",
+      "title": "Livestock Rabbits and Cavies",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-livestock_rabbits_and_cavies/",
+      "size": 52335754,
+      "checked_at": "2026-11-20T21:36:53+00:00"
+    },
+    {
+      "id": "livestock_sheep",
+      "title": "Livestock Sheep",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-livestock_sheep/",
+      "size": 244869997,
+      "checked_at": "2026-11-20T21:37:03+00:00"
+    },
+    {
+      "id": "livestock_swine",
+      "title": "Livestock Swine",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-livestock_swine/",
+      "size": 220640048,
+      "checked_at": "2026-11-20T21:37:03+00:00"
+    },
+    {
+      "id": "machine_tools",
+      "title": "Machine Tools",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-machine_tools/",
+      "size": 744037225,
+      "checked_at": "2026-11-20T21:37:03+00:00"
+    },
+    {
+      "id": "machinerys_reference",
+      "title": "Machinerys Reference",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-machinerys_reference/",
+      "size": 309584531,
+      "checked_at": "2026-11-20T21:37:03+00:00"
+    },
+    {
+      "id": "masterpieces_of_eloquence",
+      "title": "Masterpieces of Eloquence",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-masterpieces_of_eloquence/",
+      "size": 500906736,
+      "checked_at": "2026-11-20T21:37:10+00:00"
+    },
+    {
+      "id": "mathematics",
+      "title": "Mathematics",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-mathematics/",
+      "size": 641603016,
+      "checked_at": "2026-11-20T21:37:11+00:00"
+    },
+    {
+      "id": "mechanical_drawing",
+      "title": "Mechanical Drawing",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-mechanical_drawing/",
+      "size": 368352306,
+      "checked_at": "2026-11-20T21:37:10+00:00"
+    },
+    {
+      "id": "medical_anesthesia",
+      "title": "Medical Anesthesia",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-medical_anesthesia/",
+      "size": 1277891099,
+      "checked_at": "2026-11-20T21:37:10+00:00"
+    },
+    {
+      "id": "medical_courses_us_army",
+      "title": "Medical Courses US Army",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-medical_courses_us_army/",
+      "size": 187987816,
+      "checked_at": "2026-11-20T21:37:19+00:00"
+    },
+    {
+      "id": "medical_diagnostics",
+      "title": "Medical Diagnostics",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-medical_diagnostics/",
+      "size": 3836723708,
+      "checked_at": "2026-11-20T21:37:19+00:00"
+    },
+    {
+      "id": "medical_emergency",
+      "title": "Medical Emergency",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-medical_emergency/",
+      "size": 49857166,
+      "checked_at": "2026-11-20T21:37:19+00:00"
+    },
+    {
+      "id": "medical_hypnotism",
+      "title": "Medical Hypnotism",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-medical_hypnotism/",
+      "size": 831028914,
+      "checked_at": "2026-11-20T21:37:19+00:00"
+    },
+    {
+      "id": "medical_medicine_1900-1922",
+      "title": "Medical Medicine 1900-1922",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-medical_medicine_1900-1922/",
+      "size": 1376690270,
+      "checked_at": "2026-11-20T21:37:29+00:00"
+    },
+    {
+      "id": "medical_microscopy",
+      "title": "Medical Microscopy",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-medical_microscopy/",
+      "size": 469377741,
+      "checked_at": "2026-11-20T21:37:29+00:00"
+    },
+    {
+      "id": "medical_nursing",
+      "title": "Medical Nursing",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-medical_nursing/",
+      "size": 454868561,
+      "checked_at": "2026-11-20T21:37:29+00:00"
+    },
+    {
+      "id": "medical_obstetrics_1900-1922",
+      "title": "Medical Obstetrics 1900-1922",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-medical_obstetrics_1900-1922/",
+      "size": 1840067098,
+      "checked_at": "2026-11-20T21:37:29+00:00"
+    },
+    {
+      "id": "medical_surgery_1900-1922",
+      "title": "Medical Surgery 1900-1922",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-medical_surgery_1900-1922/",
+      "size": 838664679,
+      "checked_at": "2026-11-20T21:37:39+00:00"
+    },
+    {
+      "id": "medical_surgery_2",
+      "title": "Medical Surgery 2",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-medical_surgery_2/",
+      "size": 1137617777,
+      "checked_at": "2026-11-20T21:37:39+00:00"
+    },
+    {
+      "id": "medical_x_rays",
+      "title": "Medical X Rays",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-medical_x_rays/",
+      "size": 222829856,
+      "checked_at": "2026-11-20T21:37:39+00:00"
+    },
+    {
+      "id": "meteorology",
+      "title": "Meteorology",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-meteorology/",
+      "size": 1767580151,
+      "checked_at": "2026-11-20T21:37:39+00:00"
+    },
+    {
+      "id": "mimeograph",
+      "title": "Mimeograph",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-mimeograph/",
+      "size": 422265355,
+      "checked_at": "2026-11-20T21:37:48+00:00"
+    },
+    {
+      "id": "miscellaneous",
+      "title": "Miscellaneous",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-miscellaneous/",
+      "size": 15488930,
+      "checked_at": "2026-11-20T21:37:48+00:00"
+    },
+    {
+      "id": "monasticism",
+      "title": "Monasticism",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-monasticism/",
+      "size": 762326255,
+      "checked_at": "2026-11-20T21:37:48+00:00"
+    },
+    {
+      "id": "morality",
+      "title": "Morality",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-morality/",
+      "size": 594135226,
+      "checked_at": "2026-11-20T21:37:48+00:00"
+    },
+    {
+      "id": "mushrooms",
+      "title": "Mushrooms",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-mushrooms/",
+      "size": 329707046,
+      "checked_at": "2026-11-20T21:37:56+00:00"
+    },
+    {
+      "id": "musical_instruments",
+      "title": "Musical Instruments",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-musical_instruments/",
+      "size": 572117910,
+      "checked_at": "2026-11-20T21:37:56+00:00"
+    },
+    {
+      "id": "navigation",
+      "title": "Navigation",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-navigation/",
+      "size": 1033755500,
+      "checked_at": "2026-11-20T21:37:56+00:00"
+    },
+    {
+      "id": "nbc",
+      "title": "NBC",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-nbc/",
+      "size": 249464630,
+      "checked_at": "2026-11-20T21:37:56+00:00"
+    },
+    {
+      "id": "opium",
+      "title": "Opium",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-opium/",
+      "size": 433686300,
+      "checked_at": "2026-11-20T21:38:04+00:00"
+    },
+    {
+      "id": "optometry",
+      "title": "Optometry",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-optometry/",
+      "size": 269014600,
+      "checked_at": "2026-11-20T21:38:03+00:00"
+    },
+    {
+      "id": "orchards",
+      "title": "Orchards",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-orchards/",
+      "size": 1744316762,
+      "checked_at": "2026-11-20T21:38:04+00:00"
+    },
+    {
+      "id": "painting_drawing",
+      "title": "Painting Drawing",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-painting_drawing/",
+      "size": 1506275946,
+      "checked_at": "2026-11-20T21:38:04+00:00"
+    },
+    {
+      "id": "papermaking",
+      "title": "Papermaking",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-papermaking/",
+      "size": 558356167,
+      "checked_at": "2026-11-20T21:38:12+00:00"
+    },
+    {
+      "id": "photography",
+      "title": "Photography",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-photography/",
+      "size": 410102639,
+      "checked_at": "2026-11-20T21:38:12+00:00"
+    },
+    {
+      "id": "pottery",
+      "title": "Pottery",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-pottery/",
+      "size": 424190908,
+      "checked_at": "2026-11-20T21:38:12+00:00"
+    },
+    {
+      "id": "poultry",
+      "title": "Poultry",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-poultry/",
+      "size": 630266438,
+      "checked_at": "2026-11-20T21:38:12+00:00"
+    },
+    {
+      "id": "primers",
+      "title": "Primers",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-primers/",
+      "size": 276078016,
+      "checked_at": "2026-11-20T21:38:21+00:00"
+    },
+    {
+      "id": "printing",
+      "title": "Printing",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-printing/",
+      "size": 733797829,
+      "checked_at": "2026-11-20T21:38:21+00:00"
+    },
+    {
+      "id": "radio",
+      "title": "Radio",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-radio/",
+      "size": 452019864,
+      "checked_at": "2026-11-20T21:38:21+00:00"
+    },
+    {
+      "id": "radio_73_magazine",
+      "title": "Radio 73 Magazine",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-radio_73_magazine/",
+      "size": 17709328823,
+      "checked_at": "2026-11-20T21:38:21+00:00"
+    },
+    {
+      "id": "railroads",
+      "title": "Railroads",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-railroads/",
+      "size": 2181242633,
+      "checked_at": "2026-11-20T21:40:57+00:00"
+    },
+    {
+      "id": "rat_control",
+      "title": "Rat Control",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-rat_control/",
+      "size": 218219228,
+      "checked_at": "2026-11-20T21:40:57+00:00"
+    },
+    {
+      "id": "refrigeration",
+      "title": "Refrigeration",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-refrigeration/",
+      "size": 1477918491,
+      "checked_at": "2026-11-20T21:40:58+00:00"
+    },
+    {
+      "id": "religion",
+      "title": "Religion",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-religion/",
+      "size": 189854022,
+      "checked_at": "2026-11-20T21:40:57+00:00"
+    },
+    {
+      "id": "sanitation",
+      "title": "Sanitation",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-sanitation/",
+      "size": 1066649589,
+      "checked_at": "2026-11-20T21:38:37+00:00"
+    },
+    {
+      "id": "sewage",
+      "title": "Sewage",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-sewage/",
+      "size": 1722753275,
+      "checked_at": "2026-11-20T21:38:37+00:00"
+    },
+    {
+      "id": "sewing",
+      "title": "Sewing",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-sewing/",
+      "size": 845977875,
+      "checked_at": "2026-11-20T21:38:37+00:00"
+    },
+    {
+      "id": "shelter",
+      "title": "Shelter",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-shelter/",
+      "size": 303204597,
+      "checked_at": "2026-11-20T21:38:37+00:00"
+    },
+    {
+      "id": "shipbuilding",
+      "title": "Shipbuilding",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-shipbuilding/",
+      "size": 1395950965,
+      "checked_at": "2026-11-20T21:38:47+00:00"
+    },
+    {
+      "id": "shoemaking",
+      "title": "Shoemaking",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-shoemaking/",
+      "size": 218197463,
+      "checked_at": "2026-11-20T21:38:47+00:00"
+    },
+    {
+      "id": "shorthand",
+      "title": "Shorthand",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-shorthand/",
+      "size": 405873202,
+      "checked_at": "2026-11-20T21:38:47+00:00"
+    },
+    {
+      "id": "silk_culture",
+      "title": "Silk Culture",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-silk_culture/",
+      "size": 47371092,
+      "checked_at": "2026-11-20T21:38:47+00:00"
+    },
+    {
+      "id": "sliderules",
+      "title": "Sliderules",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-sliderules/",
+      "size": 711092810,
+      "checked_at": "2026-11-20T21:38:56+00:00"
+    },
+    {
+      "id": "smithing",
+      "title": "Smithing",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-smithing/",
+      "size": 3316599865,
+      "checked_at": "2026-11-20T21:38:56+00:00"
+    },
+    {
+      "id": "soap",
+      "title": "Soap",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-soap/",
+      "size": 783830409,
+      "checked_at": "2026-11-20T21:38:56+00:00"
+    },
+    {
+      "id": "steam_engines",
+      "title": "Steam Engines",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-steam_engines/",
+      "size": 1827551036,
+      "checked_at": "2026-11-20T21:38:56+00:00"
+    },
+    {
+      "id": "stone_and_masonry",
+      "title": "Stone and Masonry",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-stone_and_masonry/",
+      "size": 329080485,
+      "checked_at": "2026-11-20T21:39:06+00:00"
+    },
+    {
+      "id": "sulphuric_acid",
+      "title": "Sulphuric Acid",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-sulphuric_acid/",
+      "size": 258734984,
+      "checked_at": "2026-11-20T21:39:06+00:00"
+    },
+    {
+      "id": "surveying",
+      "title": "Surveying",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-surveying/",
+      "size": 684348589,
+      "checked_at": "2026-11-20T21:39:06+00:00"
+    },
+    {
+      "id": "survival_individual",
+      "title": "Survival Individual",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-survival_individual/",
+      "size": 617038369,
+      "checked_at": "2026-11-20T21:39:06+00:00"
+    },
+    {
+      "id": "teaching",
+      "title": "Teaching",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-teaching/",
+      "size": 951670264,
+      "checked_at": "2026-11-20T21:39:15+00:00"
+    },
+    {
+      "id": "teaching_arithmetic",
+      "title": "Teaching Arithmetic",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-teaching_arithmetic/",
+      "size": 692090172,
+      "checked_at": "2026-11-20T21:39:15+00:00"
+    },
+    {
+      "id": "teaching_civics",
+      "title": "Teaching Civics",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-teaching_civics/",
+      "size": 7522302179,
+      "checked_at": "2026-11-20T21:39:15+00:00"
+    },
+    {
+      "id": "teaching_penmanship",
+      "title": "Teaching Penmanship",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-teaching_penmanship/",
+      "size": 1836274290,
+      "checked_at": "2026-11-20T21:39:16+00:00"
+    },
+    {
+      "id": "teaching_phonics",
+      "title": "Teaching Phonics",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-teaching_phonics/",
+      "size": 97904108,
+      "checked_at": "2026-11-20T21:39:23+00:00"
+    },
+    {
+      "id": "teaching_readers",
+      "title": "Teaching Readers",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-teaching_readers/",
+      "size": 1273812973,
+      "checked_at": "2026-11-20T21:39:23+00:00"
+    },
+    {
+      "id": "teaching_readers_mcguffey",
+      "title": "Teaching Readers McGuffey",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-teaching_readers_mcguffey/",
+      "size": 501658686,
+      "checked_at": "2026-11-20T21:39:23+00:00"
+    },
+    {
+      "id": "telegraph_and_telephone",
+      "title": "Telegraph and Telephone",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-telegraph_and_telephone/",
+      "size": 403108675,
+      "checked_at": "2026-11-20T21:39:23+00:00"
+    },
+    {
+      "id": "thanksgiving",
+      "title": "Thanksgiving",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-thanksgiving/",
+      "size": 59874908,
+      "checked_at": "2026-11-20T21:39:32+00:00"
+    },
+    {
+      "id": "tobacco",
+      "title": "Tobacco",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-tobacco/",
+      "size": 4579268152,
+      "checked_at": "2026-11-20T21:39:32+00:00"
+    },
+    {
+      "id": "toys",
+      "title": "Toys",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-toys/",
+      "size": 239243860,
+      "checked_at": "2026-11-20T21:39:32+00:00"
+    },
+    {
+      "id": "trapping_hunting",
+      "title": "Trapping Hunting",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-trapping_hunting/",
+      "size": 399361448,
+      "checked_at": "2026-11-20T21:39:32+00:00"
+    },
+    {
+      "id": "turpentine_glue_solvents",
+      "title": "Turpentine Glue Solvents",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-turpentine_glue_solvents/",
+      "size": 449382252,
+      "checked_at": "2026-11-20T21:39:40+00:00"
+    },
+    {
+      "id": "veterinary",
+      "title": "Veterinary",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-veterinary/",
+      "size": 1762008776,
+      "checked_at": "2026-11-20T21:39:40+00:00"
+    },
+    {
+      "id": "wagons_and_coaches",
+      "title": "Wagons and Coaches",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-wagons_and_coaches/",
+      "size": 491909723,
+      "checked_at": "2026-11-20T21:39:40+00:00"
+    },
+    {
+      "id": "weaving",
+      "title": "Weaving",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-weaving/",
+      "size": 1026904647,
+      "checked_at": "2026-11-20T21:39:40+00:00"
+    },
+    {
+      "id": "welding",
+      "title": "Welding",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-welding/",
+      "size": 803940855,
+      "checked_at": "2026-11-20T21:39:49+00:00"
+    },
+    {
+      "id": "wind_and_water",
+      "title": "Wind and Water",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-wind_and_water/",
+      "size": 964932617,
+      "checked_at": "2026-11-20T21:39:49+00:00"
+    },
+    {
+      "id": "wood_carpentry",
+      "title": "Wood Carpentry",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-wood_carpentry/",
+      "size": 1307570332,
+      "checked_at": "2026-11-20T21:39:49+00:00"
+    },
+    {
+      "id": "wood_carving",
+      "title": "Wood Carving",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-wood_carving/",
+      "size": 204155234,
+      "checked_at": "2026-11-20T21:39:49+00:00"
+    },
+    {
+      "id": "wood_furniture",
+      "title": "Wood Furniture",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-wood_furniture/",
+      "size": 2919688606,
+      "checked_at": "2026-11-20T21:39:57+00:00"
+    },
+    {
+      "id": "world_depression",
+      "title": "World Depression",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-world_depression/",
+      "size": 761473115,
+      "checked_at": "2026-11-20T21:39:57+00:00"
+    },
+    {
+      "id": "x_scientific_american_series 1",
+      "title": "X Scientific American Series 1",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-x_scientific_american_series%201/",
+      "no_zip": true,
+      "checked_at": "2026-11-20T21:42:06+00:00"
+    },
+    {
+      "id": "x_scientific_american_series 2",
+      "title": "X Scientific American Series 2",
+      "source_url": "https://www.survivorlibrary.com/index.php/library-x_scientific_american_series%202/",
+      "no_zip": true,
+      "checked_at": "2026-11-20T21:42:06+00:00"
+    }
+  ],
+  "files": {
+    "https://www.survivorlibrary.com/library/Aeroplanes.ZIP": {
+      "size": 231530112,
+      "checked_at": "2026-11-20T21:34:03+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Airships.ZIP": {
+      "size": 160129993,
+      "checked_at": "2026-11-20T21:34:03+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Accounting.ZIP": {
+      "size": 265534665,
+      "checked_at": "2026-11-20T21:34:03+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Archery.ZIP": {
+      "size": 251576774,
+      "checked_at": "2026-11-20T21:34:03+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Baking.ZIP": {
+      "size": 524179064,
+      "checked_at": "2026-11-20T21:34:10+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Astronomy.ZIP": {
+      "size": 4979362648,
+      "checked_at": "2026-11-20T21:34:10+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Banking.ZIP": {
+      "size": 1317951734,
+      "checked_at": "2026-11-20T21:34:10+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Architecture.ZIP": {
+      "size": 11306617193,
+      "checked_at": "2026-11-20T21:34:10+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Basketry.ZIP": {
+      "size": 459506657,
+      "checked_at": "2026-11-20T21:34:18+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Bee_Journal_American.ZIP": {
+      "size": 3115941950,
+      "checked_at": "2026-11-20T21:34:18+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Beekeeping.ZIP": {
+      "size": 1521700429,
+      "checked_at": "2026-11-20T21:34:18+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Bee_Journal_British.ZIP": {
+      "size": 2428447237,
+      "checked_at": "2026-11-20T21:34:18+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Boilermaker.ZIP": {
+      "size": 146751208,
+      "checked_at": "2026-11-20T21:34:26+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Bookbinding.ZIP": {
+      "size": 334711564,
+      "checked_at": "2026-11-20T21:34:26+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Berries.ZIP": {
+      "size": 241800597,
+      "checked_at": "2026-11-20T21:34:26+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Books_for_Boys_and_Girls.ZIP": {
+      "size": 1339007278,
+      "checked_at": "2026-11-20T21:34:26+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Botany.ZIP": {
+      "size": 3035061598,
+      "checked_at": "2026-11-20T21:34:33+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Boy_Scout_Manuals.ZIP": {
+      "size": 629959580,
+      "checked_at": "2026-11-20T21:34:33+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Books_for_Young_Children.ZIP": {
+      "size": 2273973330,
+      "checked_at": "2026-11-20T21:34:33+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Brewing_and_Distilling.ZIP": {
+      "size": 475770318,
+      "checked_at": "2026-11-20T21:34:33+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Canning.ZIP": {
+      "size": 297462299,
+      "checked_at": "2026-11-20T21:34:42+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Butchering.ZIP": {
+      "size": 350596591,
+      "checked_at": "2026-11-20T21:34:42+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Cheese_and_Butter.ZIP": {
+      "size": 360490909,
+      "checked_at": "2026-11-20T21:34:42+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Bridges_and_Dams.ZIP": {
+      "size": 277842147,
+      "checked_at": "2026-11-20T21:34:42+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Christmas.ZIP": {
+      "size": 209385783,
+      "checked_at": "2026-11-20T21:34:49+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Chemistry.ZIP": {
+      "size": 1108112043,
+      "checked_at": "2026-11-20T21:34:49+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Clockmaking.ZIP": {
+      "size": 749108886,
+      "checked_at": "2026-11-20T21:34:49+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Coal_and_Mining.ZIP": {
+      "size": 4622956878,
+      "checked_at": "2026-11-20T21:34:49+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Construction.ZIP": {
+      "size": 528161613,
+      "checked_at": "2026-11-20T21:34:58+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Conduct_of_Life.ZIP": {
+      "size": 890301580,
+      "checked_at": "2026-11-20T21:34:58+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Concrete.ZIP": {
+      "size": 1101970427,
+      "checked_at": "2026-11-20T21:34:58+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Coffee_and_Tea.ZIP": {
+      "size": 1404931801,
+      "checked_at": "2026-11-20T21:34:58+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Dentistry.ZIP": {
+      "size": 757771733,
+      "checked_at": "2026-11-20T21:35:07+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Cotton.ZIP": {
+      "size": 524782273,
+      "checked_at": "2026-11-20T21:35:07+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Cycles_Bi_Tri_Motor.ZIP": {
+      "size": 752280906,
+      "checked_at": "2026-11-20T21:35:07+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Cooking_and_Cookbooks.zip": {
+      "size": 1118448019,
+      "checked_at": "2026-11-20T21:35:07+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Embalming.ZIP": {
+      "size": 123188214,
+      "checked_at": "2026-11-20T21:35:14+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Dogs.ZIP": {
+      "size": 1609533262,
+      "checked_at": "2026-11-20T21:35:14+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Drilling.ZIP": {
+      "size": 143209522,
+      "checked_at": "2026-11-20T21:35:14+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Economics.ZIP": {
+      "size": 1469026374,
+      "checked_at": "2026-11-20T21:35:14+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Encyclopedias.ZIP": {
+      "size": 8042557286,
+      "checked_at": "2026-11-20T21:35:22+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Engineering_Electrical.ZIP": {
+      "size": 1263831774,
+      "checked_at": "2026-11-20T21:35:22+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Engineering_Drainage.ZIP": {
+      "size": 166813391,
+      "checked_at": "2026-11-20T21:35:22+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Engineering_General.ZIP": {
+      "size": 1625012766,
+      "checked_at": "2026-11-20T21:35:22+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Ethics.ZIP": {
+      "size": 696368565,
+      "checked_at": "2026-11-20T21:35:30+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Engraving_and_Woodcuts.ZIP": {
+      "size": 973079282,
+      "checked_at": "2026-11-20T21:35:30+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Engineering_Hydraulics.ZIP": {
+      "size": 140835466,
+      "checked_at": "2026-11-20T21:35:30+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Farming.ZIP": {
+      "size": 4909828340,
+      "checked_at": "2026-11-20T21:35:30+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Farming_Grapes.ZIP": {
+      "size": 781632738,
+      "checked_at": "2026-11-20T21:35:37+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Farming_Corn.ZIP": {
+      "size": 1223665535,
+      "checked_at": "2026-11-20T21:35:37+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Farming_Fish.ZIP": {
+      "size": 155359554,
+      "checked_at": "2026-11-20T21:35:37+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Farming_Cotton.ZIP": {
+      "size": 524782273,
+      "checked_at": "2026-11-20T21:35:37+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Firearms.ZIP": {
+      "size": 702678710,
+      "checked_at": "2026-11-20T21:35:45+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Firearms_Manuals.ZIP": {
+      "size": 1299413517,
+      "checked_at": "2026-11-20T21:35:45+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Farming_Potato_and_Sweet_Potato.ZIP": {
+      "size": 770375541,
+      "checked_at": "2026-11-20T21:35:45+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Fishing.ZIP": {
+      "size": 1127066132,
+      "checked_at": "2026-11-20T21:35:45+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Food.ZIP": {
+      "size": 56428559,
+      "checked_at": "2026-11-20T21:35:54+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Formulas.ZIP": {
+      "size": 969317286,
+      "checked_at": "2026-11-20T21:35:54+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Forestry.ZIP": {
+      "size": 934111168,
+      "checked_at": "2026-11-20T21:35:54+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Forging_and_Casting.ZIP": {
+      "size": 2423594287,
+      "checked_at": "2026-11-20T21:35:54+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Fuels.ZIP": {
+      "size": 2610791155,
+      "checked_at": "2026-11-20T21:36:03+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Glassmaking.ZIP": {
+      "size": 443873764,
+      "checked_at": "2026-11-20T21:36:03+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Geography.ZIP": {
+      "size": 642149167,
+      "checked_at": "2026-11-20T21:36:03+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Geodesy.ZIP": {
+      "size": 488369348,
+      "checked_at": "2026-11-20T21:36:03+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Great_Books.ZIP": {
+      "size": 4927497859,
+      "checked_at": "2026-11-20T21:36:10+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Grapes_Wine_Raisins.ZIP": {
+      "size": 781632738,
+      "checked_at": "2026-11-20T21:36:10+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Hatmaking.ZIP": {
+      "size": 118051690,
+      "checked_at": "2026-11-20T21:36:10+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Gunpowder_and_Explosives.ZIP": {
+      "size": 285815948,
+      "checked_at": "2026-11-20T21:36:10+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Herbalism.ZIP": {
+      "size": 2202022236,
+      "checked_at": "2026-11-20T21:36:18+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Heating.ZIP": {
+      "size": 1690546484,
+      "checked_at": "2026-11-20T21:36:18+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Heavy_Industrial_Machinery.ZIP": {
+      "size": 1207247633,
+      "checked_at": "2026-11-20T21:36:18+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Hemp_Flax.ZIP": {
+      "size": 204382495,
+      "checked_at": "2026-11-20T21:36:18+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Home_Economics.ZIP": {
+      "size": 1491594005,
+      "checked_at": "2026-11-20T21:36:26+00:00"
+    },
+    "https://www.survivorlibrary.com/library/History_World.ZIP": {
+      "size": 657714492,
+      "checked_at": "2026-11-20T21:36:26+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Horses.ZIP": {
+      "size": 3464680940,
+      "checked_at": "2026-11-20T21:36:26+00:00"
+    },
+    "https://www.survivorlibrary.com/library/History_American.ZIP": {
+      "size": 1995229334,
+      "checked_at": "2026-11-20T21:36:26+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Languages.ZIP": {
+      "size": 154154873,
+      "checked_at": "2026-11-20T21:36:35+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Journalism.ZIP": {
+      "size": 1139104967,
+      "checked_at": "2026-11-20T21:36:35+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Knitting_Lace_Needlepoint.ZIP": {
+      "size": 422951706,
+      "checked_at": "2026-11-20T21:36:35+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Laundry.ZIP": {
+      "size": 347503603,
+      "checked_at": "2026-11-20T21:36:35+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Leisure_Games_and_Sports.ZIP": {
+      "size": 1214272952,
+      "checked_at": "2026-11-20T21:36:44+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Leisure_Recreation_Magazine.ZIP": {
+      "size": 4421342560,
+      "checked_at": "2026-11-20T21:36:44+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Law.ZIP": {
+      "size": 10356184188,
+      "checked_at": "2026-11-20T21:36:44+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Leather.ZIP": {
+      "size": 874200477,
+      "checked_at": "2026-11-20T21:36:44+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Livestock_Cattle.ZIP": {
+      "size": 362190879,
+      "checked_at": "2026-11-20T21:36:53+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Leisure_Whist.ZIP": {
+      "size": 212219922,
+      "checked_at": "2026-11-20T21:36:53+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Livestock_Rabbits_and_Cavies.ZIP": {
+      "size": 52335754,
+      "checked_at": "2026-11-20T21:36:53+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Lithography.ZIP": {
+      "size": 130716599,
+      "checked_at": "2026-11-20T21:36:53+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Livestock_Swine.ZIP": {
+      "size": 220640048,
+      "checked_at": "2026-11-20T21:37:03+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Livestock_Sheep.ZIP": {
+      "size": 244869997,
+      "checked_at": "2026-11-20T21:37:03+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Machinerys_Reference.ZIP": {
+      "size": 309584531,
+      "checked_at": "2026-11-20T21:37:03+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Machine_Tools.ZIP": {
+      "size": 744037225,
+      "checked_at": "2026-11-20T21:37:03+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Masterpieces_of_Eloquence.ZIP": {
+      "size": 500906736,
+      "checked_at": "2026-11-20T21:37:10+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Medical_Anesthesia.ZIP": {
+      "size": 1277891099,
+      "checked_at": "2026-11-20T21:37:10+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Mechanical_Drawing.ZIP": {
+      "size": 368352306,
+      "checked_at": "2026-11-20T21:37:10+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Mathematics.ZIP": {
+      "size": 641603016,
+      "checked_at": "2026-11-20T21:37:11+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Medical_Emergency.ZIP": {
+      "size": 49857166,
+      "checked_at": "2026-11-20T21:37:19+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Medical_Courses_US_Army.ZIP": {
+      "size": 187987816,
+      "checked_at": "2026-11-20T21:37:19+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Medical_Diagnostics.ZIP": {
+      "size": 3836723708,
+      "checked_at": "2026-11-20T21:37:19+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Medical_Hypnotism.ZIP": {
+      "size": 831028914,
+      "checked_at": "2026-11-20T21:37:19+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Medical_Microscopy.ZIP": {
+      "size": 469377741,
+      "checked_at": "2026-11-20T21:37:29+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Medical_Nursing.ZIP": {
+      "size": 454868561,
+      "checked_at": "2026-11-20T21:37:29+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Medical_Medicine_1900-1922.ZIP": {
+      "size": 1376690270,
+      "checked_at": "2026-11-20T21:37:29+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Medical_Obstetrics_1900-1922.ZIP": {
+      "size": 1840067098,
+      "checked_at": "2026-11-20T21:37:29+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Medical_Surgery_2.ZIP": {
+      "size": 1137617777,
+      "checked_at": "2026-11-20T21:37:39+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Medical_Surgery_1900-1922.ZIP": {
+      "size": 838664679,
+      "checked_at": "2026-11-20T21:37:39+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Medical_X_Rays.ZIP": {
+      "size": 222829856,
+      "checked_at": "2026-11-20T21:37:39+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Meteorology.ZIP": {
+      "size": 1767580151,
+      "checked_at": "2026-11-20T21:37:39+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Mimeograph.ZIP": {
+      "size": 422265355,
+      "checked_at": "2026-11-20T21:37:48+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Miscellaneous.ZIP": {
+      "size": 15488930,
+      "checked_at": "2026-11-20T21:37:48+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Monasticism.ZIP": {
+      "size": 762326255,
+      "checked_at": "2026-11-20T21:37:48+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Morality.ZIP": {
+      "size": 594135226,
+      "checked_at": "2026-11-20T21:37:48+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Mushrooms.ZIP": {
+      "size": 329707046,
+      "checked_at": "2026-11-20T21:37:56+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Musical_Instruments.ZIP": {
+      "size": 572117910,
+      "checked_at": "2026-11-20T21:37:56+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Navigation.ZIP": {
+      "size": 1033755500,
+      "checked_at": "2026-11-20T21:37:56+00:00"
+    },
+    "https://www.survivorlibrary.com/library/NBC.ZIP": {
+      "size": 249464630,
+      "checked_at": "2026-11-20T21:37:56+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Optometry.ZIP": {
+      "size": 269014600,
+      "checked_at": "2026-11-20T21:38:03+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Opium.ZIP": {
+      "size": 433686300,
+      "checked_at": "2026-11-20T21:38:04+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Orchards.zip": {
+      "size": 1744316762,
+      "checked_at": "2026-11-20T21:38:04+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Painting_Drawing.ZIP": {
+      "size": 1506275946,
+      "checked_at": "2026-11-20T21:38:04+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Poultry.ZIP": {
+      "size": 630266438,
+      "checked_at": "2026-11-20T21:38:12+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Pottery.ZIP": {
+      "size": 424190908,
+      "checked_at": "2026-11-20T21:38:12+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Photography.ZIP": {
+      "size": 410102639,
+      "checked_at": "2026-11-20T21:38:12+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Papermaking.ZIP": {
+      "size": 558356167,
+      "checked_at": "2026-11-20T21:38:12+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Printing.ZIP": {
+      "size": 733797829,
+      "checked_at": "2026-11-20T21:38:21+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Radio_73_Magazine.ZIP": {
+      "size": 17709328823,
+      "checked_at": "2026-11-20T21:38:21+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Primers.ZIP": {
+      "size": 276078016,
+      "checked_at": "2026-11-20T21:38:21+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Radio.ZIP": {
+      "size": 452019864,
+      "checked_at": "2026-11-20T21:38:21+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Sewing.ZIP": {
+      "size": 845977875,
+      "checked_at": "2026-11-20T21:38:37+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Shelter.ZIP": {
+      "size": 303204597,
+      "checked_at": "2026-11-20T21:38:37+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Sanitation.ZIP": {
+      "size": 1066649589,
+      "checked_at": "2026-11-20T21:38:37+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Sewage.ZIP": {
+      "size": 1722753275,
+      "checked_at": "2026-11-20T21:38:37+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Shorthand.ZIP": {
+      "size": 405873202,
+      "checked_at": "2026-11-20T21:38:47+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Shipbuilding.ZIP": {
+      "size": 1395950965,
+      "checked_at": "2026-11-20T21:38:47+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Silk_Culture.ZIP": {
+      "size": 47371092,
+      "checked_at": "2026-11-20T21:38:47+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Shoemaking.ZIP": {
+      "size": 218197463,
+      "checked_at": "2026-11-20T21:38:47+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Smithing.ZIP": {
+      "size": 3316599865,
+      "checked_at": "2026-11-20T21:38:56+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Sliderules.ZIP": {
+      "size": 711092810,
+      "checked_at": "2026-11-20T21:38:56+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Soap.ZIP": {
+      "size": 783830409,
+      "checked_at": "2026-11-20T21:38:56+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Steam_Engines.ZIP": {
+      "size": 1827551036,
+      "checked_at": "2026-11-20T21:38:56+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Stone_and_Masonry.ZIP": {
+      "size": 329080485,
+      "checked_at": "2026-11-20T21:39:06+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Surveying.ZIP": {
+      "size": 684348589,
+      "checked_at": "2026-11-20T21:39:06+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Survival_Individual.ZIP": {
+      "size": 617038369,
+      "checked_at": "2026-11-20T21:39:06+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Sulphuric_Acid.ZIP": {
+      "size": 258734984,
+      "checked_at": "2026-11-20T21:39:06+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Teaching_Arithmetic.ZIP": {
+      "size": 692090172,
+      "checked_at": "2026-11-20T21:39:15+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Teaching_Civics.ZIP": {
+      "size": 7522302179,
+      "checked_at": "2026-11-20T21:39:15+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Teaching.ZIP": {
+      "size": 951670264,
+      "checked_at": "2026-11-20T21:39:15+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Teaching_Penmanship.ZIP": {
+      "size": 1836274290,
+      "checked_at": "2026-11-20T21:39:16+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Teaching_Phonics.ZIP": {
+      "size": 97904108,
+      "checked_at": "2026-11-20T21:39:23+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Teaching_Readers.ZIP": {
+      "size": 1273812973,
+      "checked_at": "2026-11-20T21:39:23+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Telegraph_and_Telephone.ZIP": {
+      "size": 403108675,
+      "checked_at": "2026-11-20T21:39:23+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Teaching_Readers_McGuffey.ZIP": {
+      "size": 501658686,
+      "checked_at": "2026-11-20T21:39:23+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Trapping_Hunting.ZIP": {
+      "size": 399361448,
+      "checked_at": "2026-11-20T21:39:32+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Thanksgiving.ZIP": {
+      "size": 59874908,
+      "checked_at": "2026-11-20T21:39:32+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Tobacco.ZIP": {
+      "size": 4579268152,
+      "checked_at": "2026-11-20T21:39:32+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Toys.ZIP": {
+      "size": 239243860,
+      "checked_at": "2026-11-20T21:39:32+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Wagons_and_Coaches.ZIP": {
+      "size": 491909723,
+      "checked_at": "2026-11-20T21:39:40+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Weaving.ZIP": {
+      "size": 1026904647,
+      "checked_at": "2026-11-20T21:39:40+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Veterinary.ZIP": {
+      "size": 1762008776,
+      "checked_at": "2026-11-20T21:39:40+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Turpentine_Glue_Solvents.ZIP": {
+      "size": 449382252,
+      "checked_at": "2026-11-20T21:39:40+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Wood_Carpentry.ZIP": {
+      "size": 1307570332,
+      "checked_at": "2026-11-20T21:39:49+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Wind_and_Water.ZIP": {
+      "size": 964932617,
+      "checked_at": "2026-11-20T21:39:49+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Wood_Carving.ZIP": {
+      "size": 204155234,
+      "checked_at": "2026-11-20T21:39:49+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Welding.ZIP": {
+      "size": 803940855,
+      "checked_at": "2026-11-20T21:39:49+00:00"
+    },
+    "https://www.survivorlibrary.com/library/World_Depression.ZIP": {
+      "size": 761473115,
+      "checked_at": "2026-11-20T21:39:57+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Wood_Furniture.ZIP": {
+      "size": 2919688606,
+      "checked_at": "2026-11-20T21:39:57+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Railroads.ZIP": {
+      "size": 2181242633,
+      "checked_at": "2026-11-20T21:40:57+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Religion.ZIP": {
+      "size": 189854022,
+      "checked_at": "2026-11-20T21:40:57+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Rat_Control.ZIP": {
+      "size": 218219228,
+      "checked_at": "2026-11-20T21:40:57+00:00"
+    },
+    "https://www.survivorlibrary.com/library/Refrigeration.ZIP": {
+      "size": 1477918491,
+      "checked_at": "2026-11-20T21:40:58+00:00"
+    },
+    "https://lb.download.kiwix.org/zim/wikipedia/wikipedia_en_medicine_maxi_2026-10.zim": {
+      "size": 1864210320,
+      "checked_at": "2026-11-20T21:40:24+00:00"
+    },
+    "https://lb.download.kiwix.org/zim/zimit/medlineplus.gov_en_all_2025-01.zim": {
+      "size": 1944841111,
+      "checked_at": "2026-11-20T21:40:24+00:00"
+    },
+    "https://lb.download.kiwix.org/zim/zimit/nhs.uk_en_medicines_2026-09b.zim": {
+      "size": 15322705,
+      "checked_at": "2026-11-20T21:40:25+00:00"
+    },
+    "https://lb.download.kiwix.org/zim/zimit/ready.gov_en_all_2026-10.zim": {
+      "size": 2063895408,
+      "checked_at": "2026-11-20T21:40:24+00:00"
+    },
+    "https://lb.download.kiwix.org/zim/zimit/cd3wdproject.org_en_all_2026-11.zim": {
+      "size": 572637480,
+      "checked_at": "2026-11-20T21:40:36+00:00"
+    },
+    "https://lb.download.kiwix.org/zim/zimit/solar.lowtechmagazine.com_mul_all_2025-01.zim": {
+      "size": 700555670,
+      "checked_at": "2026-11-20T21:40:36+00:00"
+    },
+    "https://lb.download.kiwix.org/zim/zimit/based.cooking_en_all_2026-11.zim": {
+      "size": 23023253,
+      "checked_at": "2026-11-20T21:40:37+00:00"
+    },
+    "https://bunkerbot.co.uk/downloads/last-light-survival-guide-standard.zip": {
+      "size": 590567877,
+      "checked_at": "2026-11-20T21:37:39+00:00"
+    }
+  },
+  "kiwix": {
+    "wikipedia_en_medicine_maxi": {
+      "size": 1864210320,
+      "checked_at": "2026-11-20T21:40:24+00:00",
+      "download_url": "https://lb.download.kiwix.org/zim/wikipedia/wikipedia_en_medicine_maxi_2026-10.zim"
+    },
+    "medlineplus.gov_en_all": {
+      "size": 1944841111,
+      "checked_at": "2026-11-20T21:40:24+00:00",
+      "download_url": "https://lb.download.kiwix.org/zim/zimit/medlineplus.gov_en_all_2025-01.zim"
+    },
+    "nhs.uk_en_medicines": {
+      "size": 15322705,
+      "checked_at": "2026-11-20T21:40:25+00:00",
+      "download_url": "https://lb.download.kiwix.org/zim/zimit/nhs.uk_en_medicines_2026-09b.zim"
+    },
+    "ready.gov_en_all": {
+      "size": 2063895408,
+      "checked_at": "2026-11-20T21:40:24+00:00",
+      "download_url": "https://lb.download.kiwix.org/zim/zimit/ready.gov_en_all_2026-10.zim"
+    },
+    "cd3wdproject.org_en_all": {
+      "size": 572637480,
+      "checked_at": "2026-11-20T21:40:36+00:00",
+      "download_url": "https://lb.download.kiwix.org/zim/zimit/cd3wdproject.org_en_all_2026-11.zim"
+    },
+    "solar.lowtechmagazine.com_mul_all": {
+      "size": 700555670,
+      "checked_at": "2026-11-20T21:40:36+00:00",
+      "download_url": "https://lb.download.kiwix.org/zim/zimit/solar.lowtechmagazine.com_mul_all_2025-01.zim"
+    },
+    "based.cooking_en_all": {
+      "size": 23023253,
+      "checked_at": "2026-11-20T21:40:37+00:00",
+      "download_url": "https://lb.download.kiwix.org/zim/zimit/based.cooking_en_all_2026-11.zim"
+    }
+  }
+}

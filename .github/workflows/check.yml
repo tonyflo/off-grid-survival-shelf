@@ -1,0 +1,33 @@
+name: Check downloader
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  tests:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-24.04
+            python: '3.8'
+          - os: ubuntu-24.04
+            python: '3.14'
+          - os: ubuntu-24.04-arm
+            python: '3.14'
+          - os: macos-15-intel
+            python: '3.14'
+          - os: macos-15
+            python: '3.14'
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Test behavior
+        run: python3 -m unittest discover -s tests -v
