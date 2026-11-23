@@ -154,7 +154,7 @@ def show_selection_sizes(items, known_sizes):
         print('  Run bash setup.sh update to check missing sizes.')
 
 
-def show_full_library_estimate(source):
+def show_full_library_estimate(source, category=None):
     """Estimate whole-library sizes before a user selects a full catalog.
 
     Kiwix publishes sizes in its catalog. Survivor's saved category sizes are
@@ -177,12 +177,19 @@ def show_full_library_estimate(source):
         print('Checking the Kiwix catalog for an estimated size...')
         try:
             entries, unreadable = [], 0
-            for page, _, _ in kiwix.catalog_pages():
+            pages = kiwix.catalog_pages(category=category) if category else kiwix.catalog_pages()
+            for page, _, _ in pages:
                 for node in page:
                     entry = kiwix._item(node)
                     if entry is None: unreadable += 1
+                    elif category and entry.get('category', '').casefold() != category.casefold():
+                        raise ValueError('Kiwix returned an item outside the selected category')
                     else: entries.append(entry)
-            entries.extend(kiwix._maps(kiwix._fetch))
+            if category and not entries and not unreadable:
+                print('No English downloads found in this Kiwix category.')
+                return False
+            if not category:
+                entries.extend(kiwix._maps(kiwix._fetch))
             # Match the downloader's one latest edition per series and flavour,
             # and count a file only once if it is also listed in the map index.
             latest = {}
@@ -196,14 +203,40 @@ def show_full_library_estimate(source):
             unknown = len(files) - len(sizes) + unreadable
             if sizes:
                 label = size_label({'size': sum(sizes), 'size_approx': True})
-                print('Estimated Kiwix catalog and maps: {}{}'.format(
+                scope = 'Kiwix category' if category else 'Kiwix catalog and maps'
+                print('Estimated {}: {}{}'.format(scope,
                     label, ' + {} {} with unknown sizes'.format(
                         unknown, 'file' if unknown == 1 else 'files') if unknown else ''))
             else:
-                print('Estimated Kiwix catalog and maps size: unavailable.')
+                print('Estimated Kiwix {} size: unavailable.'.format('category' if category else 'catalog and maps'))
         except Exception as exc:
             print('Estimated Kiwix catalog size: unavailable ({}).'.format(exc))
     print('Existing downloads are not deducted from these estimates.')
+
+
+def choose_kiwix_category(requested=None):
+    """Choose a publisher category; None means the unfiltered catalog."""
+    if requested is not None and requested.casefold() in ('', 'all'):
+        return None
+    categories = kiwix.categories()
+    if requested is None:
+        print('\nKiwix categories (provided by Kiwix):')
+        for category in categories:
+            name = category['title']
+            if name.casefold() != category['id'].casefold():
+                name += ' ({})'.format(category['id'])
+            print('  ' + name)
+        print('  all - includes uncategorized content and separately indexed maps')
+        print('A category contains only items labeled with that category by Kiwix.')
+        requested = input('Choose a category by name (Enter for all; q to cancel): ').strip()
+    if requested.casefold() in ('q', 'quit'):
+        return False
+    if requested.casefold() in ('', 'all'):
+        return None
+    for category in categories:
+        if requested.casefold() in (category['id'].casefold(), category['title'].casefold()):
+            return category['id']
+    raise ValueError('Unknown Kiwix category: {}. Run the command again to see the list.'.format(requested))
 
 
 def read_state():
@@ -704,23 +737,32 @@ def process(item, state, update=False, planned_files=None):
                 item['files'] = list(dict.fromkeys('kiwix/' + entry['filename'] for entry in tracked))
                 save(state)
 
+        category = item.get('category')
         try:
-            for page, start, total in kiwix.catalog_pages():
+            pages = kiwix.catalog_pages(category=category) if category else kiwix.catalog_pages()
+            found_page = False
+            for page, start, total in pages:
+                found_page = True
                 for node in page:
                     entry = kiwix._item(node)
                     if entry is None:
                         errors.append('A Kiwix catalog entry has no usable ZIM download')
+                    elif category and entry.get('category', '').casefold() != category.casefold():
+                        errors.append('Kiwix returned an item outside the selected category')
                     else:
                         record(entry)
                 persist()
                 say('Found Kiwix catalog entries: {} of {}'.format(start, total))
+            if category and not found_page:
+                raise RuntimeError('No English downloads found in Kiwix category: ' + category)
         except Exception as exc:
             errors.append('Kiwix catalog discovery: ' + str(exc))
-        try:
-            for entry in kiwix._maps(kiwix._fetch): record(entry)
-            persist()
-        except Exception as exc:
-            errors.append('Kiwix maps discovery: ' + str(exc))
+        if not category:
+            try:
+                for entry in kiwix._maps(kiwix._fetch): record(entry)
+                persist()
+            except Exception as exc:
+                errors.append('Kiwix maps discovery: ' + str(exc))
 
         seen_files = set()
         for entry in tracked:
@@ -911,10 +953,15 @@ def sync(state, runlist=None, update=False, ask=False):
 
 def choose_source(include_all=False):
     print('\nSources:')
-    if include_all: print('  all         Recommended content from all three sources')
-    print('  kiwix       Encyclopedias, maps, and practical guides')
-    print('  survivor    Historical books by subject')
-    print('  last-light  One offline survival guide and reference books')
+    if include_all:
+        print('  all         The complete starter: all three sources')
+        print('  kiwix       7 health, emergency, and practical references')
+        print('  survivor    5 book collections: food, shelter, and survival')
+        print('  last-light  The Last Light survival guide')
+    else:
+        print('  kiwix       Encyclopedias, maps, and practical guides')
+        print('  survivor    Historical books by subject')
+        print('  last-light  One offline survival guide and reference books')
     if include_all:
         return input('Choose all, kiwix, survivor, or last-light [all]: ').strip().lower() or 'all'
     return input('Choose kiwix, survivor, or last-light: ').strip().lower()
@@ -930,16 +977,18 @@ Build your own offline library of survival knowledge.
 
 Start:
   bash setup.sh                          Open the menu
-  bash setup.sh starter                  Get the recommended starter library
+  bash setup.sh starter                  Choose the starter library
 
 Add content:
-  bash setup.sh starter kiwix [topic]    Get a Kiwix starter collection
+  bash setup.sh starter kiwix            Get the Kiwix starter collection
   bash setup.sh starter survivor         Get the Survivor starter collection
   bash setup.sh starter last-light       Get Last Light
   bash setup.sh browse kiwix [topic]     Browse Kiwix or search by topic
+  bash setup.sh browse kiwix --category NAME [topic]
+                                         Browse within a Kiwix category
   bash setup.sh browse survivor [topic]  Browse Survivor or search by topic
   bash setup.sh browse last-light        View and select the Last Light guide
-  bash setup.sh kiwix all                Select all English Kiwix content
+  bash setup.sh kiwix all [category]     Select a category or all of Kiwix
   bash setup.sh survivor all             Select the Survivor library
 
 Manage your library:
@@ -952,8 +1001,9 @@ Manage your library:
   bash setup.sh upgrade                  Get updates to downloaded content
   bash setup.sh log                      Follow the log (Ctrl+C to stop)
 
-Kiwix starter topics: medical, preparedness, food. Omit topic for all three.
+The starter includes 7 Kiwix references, 5 Survivor collections, and Last Light.
 Last Light is one guide; Kiwix and Survivor have many items to browse.
+Kiwix categories come from its catalog; all also includes unclassified items.
 Add --preview to see a plan without downloading or saving selections.
 Set your library folder in config.json (default: ./offline-library).
 See README.md for instructions and how to open files offline.''')
@@ -968,9 +1018,12 @@ See README.md for instructions and how to open files offline.''')
     say('Library: ' + str(DATA))
     if not command:
         if not sys.stdin.isatty(): raise RuntimeError('Run interactively for setup, or use download for saved selections.')
-        print('''\nNew here? Start with a recommended collection.
+        print('''\nNew here? The starter library includes:
+  7 Kiwix references for health, emergencies, and practical skills
+  5 Survivor book collections for food, shelter, medical care, and survival
+  The Last Light survival guide
 
-  starter   Choose a recommended collection
+  starter   Select the starter library, or choose sources
   browse    Find and select more content
   download  Get saved selections or retry downloads
   update    Refresh catalog listings and size estimates
@@ -985,10 +1038,6 @@ See README.md for instructions and how to open files offline.''')
         elif command == 'starter':
             group = choose_source(include_all=True)
             ARGS[:] = ['starter', group]
-            if group == 'kiwix':
-                print('Kiwix starter topics: medical, preparedness, food.')
-                topic = input('Choose a topic (press Enter for the full starter): ').strip().lower()
-                if topic and topic != 'all': ARGS.append(topic)
         elif command in ('help', '?'):
             ARGS[:] = ['help']
             return run()
@@ -1031,21 +1080,39 @@ See README.md for instructions and how to open files offline.''')
     elif command in ('survivor','kiwix') and len(ARGS)>1 and ARGS[1] == 'all':
         if not sys.stdin.isatty(): raise RuntimeError('Selecting the full catalog requires an interactive confirmation.')
         if command == 'survivor':
+            if len(ARGS) > 2: raise ValueError('Use survivor all without a category.')
             print('The Survivor Library can be extremely large and may take days or longer.')
             print('This includes category ZIPs and other books found in its indexes.')
             prompt, title = 'Select the Survivor library?', 'Full Survivor Library'
+            category = None
         else:
-            print('The complete English Kiwix catalog can be extremely large and may take days or longer.')
-            prompt, title = 'Select the full Kiwix catalog?', 'Full Kiwix catalog'
-        show_full_library_estimate(command)
+            if len(ARGS) > 3: raise ValueError('Use kiwix all [category].')
+            category = choose_kiwix_category(ARGS[2] if len(ARGS) == 3 else None)
+            if category is False: print('Cancelled.'); return 0
+            if category:
+                print('Selecting the Kiwix category: ' + category)
+                print('Uncategorized content and maps from the separate map index are not included.')
+                prompt, title = 'Select this Kiwix category?', 'Kiwix: ' + category
+            else:
+                print('The complete English Kiwix catalog can be extremely large and may take days or longer.')
+                prompt, title = 'Select the full Kiwix catalog?', 'Full Kiwix catalog'
+        if show_full_library_estimate(command, category=category) is False:
+            return 0
         if not confirm(prompt): print('Cancelled.'); return 0
-        chosen = [{'source':command+'-all','id':'all','title':title}]
+        chosen = [{'source':command+'-all','id':'category:' + category if category else 'all','title':title}]
+        if category: chosen[0]['category'] = category
     elif command == 'browse':
         if len(ARGS) == 1 and sys.stdin.isatty():
             ARGS.append(choose_source())
         if len(ARGS)<2 or ARGS[1] not in ('kiwix','survivor','last-light'):
             raise ValueError('Choose browse kiwix, browse survivor, or browse last-light.')
         source = ARGS[1]; topic = ' '.join(ARGS[2:]).strip()
+        category = None
+        if source == 'kiwix' and len(ARGS) > 2 and ARGS[2] == '--category':
+            if len(ARGS) < 4: raise ValueError('Use browse kiwix --category <name> [topic].')
+            category = choose_kiwix_category(ARGS[3])
+            if category is False: print('Cancelled.'); return 0
+            topic = ' '.join(ARGS[4:]).strip()
         if source == 'last-light':
             print('Last Light is one offline survival guide with reference books.')
             print('Details: https://bunkerbot.co.uk/download.html')
@@ -1053,10 +1120,28 @@ See README.md for instructions and how to open files offline.''')
         else:
             if len(ARGS) == 2:
                 if not sys.stdin.isatty(): raise RuntimeError('Use an interactive terminal to browse.')
+                if source == 'kiwix':
+                    category = choose_kiwix_category()
+                    if category is False: print('Cancelled.'); return 0
+                    if category:
+                        print('Showing Kiwix category: ' + category)
+                        print('Uncategorized content and separately indexed maps are not included.')
                 topic = input('Search by topic (press Enter to browse everything): ').strip()
             if source == 'kiwix': say('Searching the Kiwix catalog...')
         if source == 'kiwix':
-            items, more = kiwix.search_page(topic, count=-1)
+            if category:
+                items = []
+                for page, _, _ in kiwix.catalog_pages(category=category, query=topic):
+                    for node in page:
+                        entry = kiwix._item(node)
+                        if entry is None:
+                            raise RuntimeError('A Kiwix result has no usable ZIM download; try again.')
+                        if entry.get('category', '').casefold() != category.casefold():
+                            raise RuntimeError('Kiwix returned an item outside the selected category; try again.')
+                        items.append(entry)
+                more = False
+            else:
+                items, more = kiwix.search_page(topic, count=-1)
             if more:
                 raise RuntimeError('Could not verify the complete Kiwix catalog. Try again.')
             apply_cached_kiwix_sizes(items)

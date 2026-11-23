@@ -8,7 +8,7 @@ Download practical information while you have an internet connection, then keep 
 - [The Last Light](https://bunkerbot.co.uk/download.html): an offline survival guide with reference books.
 - [Survivor Library](https://www.survivorlibrary.com/): historical books organized by subject.
 
-Choose a starter collection, add individual subjects, or download larger collections. These can take considerable time and storage.
+Start with a smaller library, add individual subjects, or download larger collections. These can take considerable time and storage.
 
 ## Get started
 
@@ -22,7 +22,11 @@ bash setup.sh
 
 You can also download the repository ZIP from GitHub, extract it, and open a terminal in the extracted folder before running `bash setup.sh`.
 
-The setup menu lets you choose starter content, browse more, download your saved selections, or check their status. Downloads go into the `offline-library/` folder in the project by default.
+The **starter library** includes seven Kiwix references for health, emergency preparedness, practical skills, and recipes; five Survivor Library book collections covering canning, food, shelter, medical emergencies, and individual survival; and The Last Light guide. Choose the full starter or only the sources you want. The program shows available size estimates before asking whether to download.
+
+To select only part of the Kiwix starter, add `medical`, `preparedness`, or `food` to `bash setup.sh starter kiwix`. These are groups chosen for this starter; Kiwix's own catalog categories are described below.
+
+The setup menu also lets you browse more, download your saved selections, or check their status. Downloads go into the `offline-library/` folder in the project by default.
 
 To use a different folder, edit `config.json`, which is created the first time you run a download command without a `CACHE_DATA` override. Set `library_path` to the folder you want, for example:
 
@@ -38,16 +42,6 @@ If `CACHE_DATA` is already set in your terminal, it overrides the config file. R
 
 ## Add more content
 
-For a smaller Kiwix starter collection, choose a topic:
-
-```bash
-bash setup.sh starter kiwix medical
-bash setup.sh starter kiwix preparedness
-bash setup.sh starter kiwix food
-```
-
-Medical includes medicine and health references, preparedness includes emergency and practical skills guides, and food includes recipes. `bash setup.sh starter kiwix` selects all three.
-
 Kiwix content is discovered from its catalog. Survivor Library browsing uses a saved catalog, so it opens quickly. Use the setup menu to browse either one, or search for a topic:
 
 ```bash
@@ -55,7 +49,13 @@ bash setup.sh browse kiwix maps
 bash setup.sh browse survivor food
 ```
 
-Press Enter at the topic prompt to browse everything. Results include a source link so you can look into them before choosing. The selected downloads are remembered for future runs. Searching Kiwix and downloading files require an internet connection.
+Run `bash setup.sh browse kiwix` to choose one of Kiwix's own categories before browsing individual items. Press Enter at the category prompt to include all categories, then press Enter at the topic prompt to see all items in your choice. You can also search within a category, for example:
+
+```bash
+bash setup.sh browse kiwix --category wikipedia medicine
+```
+
+Some Kiwix entries have no category. Maps are also discovered from a separate index, so choose all categories to include those items. Category names come from Kiwix and may change. Results include a source link so you can look into them before choosing. The selected downloads are remembered for future runs. Searching Kiwix and downloading files require an internet connection.
 
 Use the arrow keys to move, the space bar to select, and Enter to save your choices. Press `q` to cancel without saving. Choose whether to download your choices now. Run `bash setup.sh download` to download all missing saved selections. Kiwix content is in English.
 
@@ -79,14 +79,16 @@ bash setup.sh update survivor food
 
 Sizes marked `~` come from the saved catalog or publisher and may have changed since they were checked. Other Kiwix results use sizes from Kiwix's catalog. The actual size is shown when a download starts, if the server provides it. `update` refreshes this information; `upgrade` checks for newer content.
 
-To select the entire Survivor Library or English Kiwix catalog:
+To select the entire Survivor Library or a Kiwix category or full English catalog:
 
 ```bash
 bash setup.sh survivor all
 bash setup.sh kiwix all
 ```
 
-Both commands show a size estimate before you choose. Kiwix uses its current catalog; Survivor uses saved category sizes and shows a partial estimate because some sizes and individual books are missing. Survivor categories can overlap, so some ZIPs may be counted more than once. These estimates cover the full collections and do not subtract files you already have.
+The Kiwix command lists the publisher's categories: enter a category name to select its contents, or press Enter to select the full catalog, including uncategorized items and separately indexed maps. The selection is saved, so `download` can retry missing items and discover new items in that category. You can also specify a category directly, for example `bash setup.sh kiwix all wikipedia`.
+
+Both commands show a size estimate before you choose. Kiwix uses its current catalog; Survivor uses saved category sizes and shows a partial estimate because some sizes and individual books are missing. Survivor categories can overlap, so some ZIPs may be counted more than once. Estimates do not subtract files you already have.
 
 The complete catalogs can be extremely large. Check the available space before choosing either one. `survivor all` downloads the ZIPs and individual books it finds in the publisher's category and recent-books indexes, including books outside category ZIPs. It compares filenames to avoid downloading books already in a ZIP. The publisher may have older files that aren't linked from either index; those can't be discovered automatically.
 

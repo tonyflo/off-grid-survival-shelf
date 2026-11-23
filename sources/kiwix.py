@@ -13,6 +13,7 @@ import urllib.request
 import xml.etree.ElementTree as ET
 
 CATALOG = 'https://opds.library.kiwix.org/catalog/v2/entries'
+CATEGORIES = 'https://opds.library.kiwix.org/catalog/v2/categories'
 MAP_INDEX = 'https://lb.download.kiwix.org/zim/maps/'
 BROWSE = 'https://browse.library.kiwix.org/'
 MAX_CATALOG_BYTES = 20 * 1024 * 1024
@@ -63,12 +64,47 @@ def _entries(query, fetch):
     return [root] if _local_name(root.tag) == 'entry' else [x for x in root if _local_name(x.tag) == 'entry']
 
 
-def catalog_pages(fetch=None):
-    """Yield verified pages of the complete English catalog, without ZIMs."""
+def categories(fetch=None):
+    """Read Kiwix's category navigation feed, without inventing categories."""
+    fetch = fetch or _fetch
+    try:
+        root = ET.fromstring(fetch(CATEGORIES))
+    except ET.ParseError as exc:
+        raise ValueError('The Kiwix categories feed was unreadable') from exc
+    if _local_name(root.tag) != 'feed':
+        raise ValueError('The Kiwix categories feed was unexpected')
+    found, seen = [], set()
+    for entry in root:
+        if _local_name(entry.tag) != 'entry':
+            continue
+        title = _child_text(entry, 'title')
+        ids = []
+        for link in entry:
+            if _local_name(link.tag) != 'link' or link.get('rel') != 'subsection':
+                continue
+            params = urllib.parse.parse_qs(urllib.parse.urlsplit(link.get('href', '')).query)
+            ids.extend(params.get('category', []))
+        if (not title or len(ids) != 1 or not ids[0].strip() or ',' in ids[0]
+                or any(ord(ch) < 32 or ord(ch) == 127 for ch in title + ids[0])):
+            raise ValueError('The Kiwix categories feed contained an invalid category')
+        category_id = ids[0]
+        if category_id not in seen:
+            found.append({'id': category_id, 'title': title})
+            seen.add(category_id)
+    return found
+
+
+def catalog_pages(fetch=None, category=None, query=None):
+    """Yield verified English catalog pages, optionally filtered by Kiwix."""
     fetch = fetch or _fetch
     start, total, fingerprints = 0, None, set()
     while True:
-        root = _feed({'start': start, 'count': 100, 'lang': 'eng'}, fetch)
+        params = {'start': start, 'count': 100, 'lang': 'eng'}
+        if category:
+            params['category'] = category
+        if query and query.strip():
+            params['q'] = query.strip()
+        root = _feed(params, fetch)
         if _local_name(root.tag) != 'feed':
             raise RuntimeError('Kiwix catalog returned an unexpected response')
         reported = _child_text(root, 'totalResults')
@@ -77,7 +113,10 @@ def catalog_pages(fetch=None):
         current_total = int(reported)
         if total is None: total = current_total
         if current_total != total: raise RuntimeError('Kiwix catalog changed during discovery; retry')
-        if not total: raise RuntimeError('Kiwix catalog returned no entries')
+        if not total:
+            if category or (query and query.strip()):
+                return  # A filter can have no matching English entries.
+            raise RuntimeError('Kiwix catalog returned no entries')
         page = [x for x in root if _local_name(x.tag) == 'entry']
         if not page: raise RuntimeError('Kiwix catalog ended before all entries were returned')
         fingerprint = tuple(_child_text(x, 'id') for x in page)
@@ -127,6 +166,7 @@ def _item(entry):
         'id': name + '|' + flavour,
         'title': title,
         'description': _child_text(entry, 'summary'),
+        'category': _child_text(entry, 'category'),
         'size': size, 'size_approx': True,
         'source_url': source or BROWSE,
         'download_url': url,
@@ -191,13 +231,14 @@ def _maps(fetch):
     return items
 
 
-def search_page(query, start=0, count=100, fetch=None):
+def search_page(query, start=0, count=100, fetch=None, category=None):
     """Return English results and whether another catalog page exists."""
     language = 'eng'
     fetch = fetch or _fetch
     params = {'start': start, 'count': count}
     if query.strip(): params['q'] = query.strip()
     if language: params['lang'] = language
+    if category: params['category'] = category
     root = _feed(params, fetch)
     entries = [root] if _local_name(root.tag) == 'entry' else [x for x in root if _local_name(x.tag) == 'entry']
     total_text = _child_text(root, 'totalResults')
@@ -205,7 +246,7 @@ def search_page(query, start=0, count=100, fetch=None):
     items = [item for entry in entries if (item := _item(entry))]
     # Maps are not reliably found by OPDS text queries. Query the maps index
     # only for an explicit map search, not for every catalog browse.
-    if start == 0 and language in ('', 'eng') and (not query.strip() or re.search(r'\bmaps?\b', query, re.I)):
+    if not category and start == 0 and language in ('', 'eng') and (not query.strip() or re.search(r'\bmaps?\b', query, re.I)):
         try:
             terms = [x.lower() for x in re.findall(r'[a-z0-9]+', query) if x.lower() not in ('map', 'maps')]
             maps = [item for item in _maps(fetch) if all(t in (item['title'] + ' ' + item['id']).lower() for t in terms)]

@@ -266,7 +266,10 @@ class TerminalTests(unittest.TestCase):
         self.assertIn('OFF-GRID SURVIVAL SHELF', out)
         self.assertIn('Build your own offline library of survival knowledge.', out)
         self.assertIn('\r\nOFF-GRID SURVIVAL SHELF\r\nBuild your own offline library of survival knowledge.', out)
-        self.assertIn('New here? Start with a recommended collection.', out)
+        self.assertIn('The starter library includes:', out)
+        self.assertIn('7 Kiwix references', out)
+        self.assertIn('5 Survivor book collections', out)
+        self.assertIn('The Last Light survival guide', out)
         self.assertIn('Refresh catalog listings and size estimates', out)
         self.assertIn('Check downloaded content for newer versions', out)
         self.assertNotIn('[|||]', out)
@@ -282,28 +285,23 @@ class TerminalTests(unittest.TestCase):
         self.assertIn('bash setup.sh browse kiwix', out)
         self.assertIn('Last Light is one guide', out)
 
-    def test_kiwix_starter_topic_and_default_from_guided_menu(self):
-        for answer, expected_ids in [
-            (b'medical\n', {'wikipedia_en_medicine_maxi', 'medlineplus.gov_en_all',
-                             'nhs.uk_en_medicines'}),
-            (b'\n', {'wikipedia_en_medicine_maxi', 'medlineplus.gov_en_all',
-                       'nhs.uk_en_medicines', 'ready.gov_en_all',
-                       'cd3wdproject.org_en_all', 'solar.lowtechmagazine.com_mul_all',
-                       'based.cooking_en_all'}),
-        ]:
-            with self.subTest(answer=answer), tempfile.TemporaryDirectory() as temp:
-                data = Path(temp) / 'library'
-                steps = [('Choose an action:', b'starter\n'),
-                         ('Choose all, kiwix, survivor, or last-light [all]:', b'kiwix\n'),
-                         ('Choose a topic (press Enter for the full starter):', answer),
-                         ('Download these selections now?', b'n\n')]
-                code, out, completed = run_pty_steps(
-                    [sys.executable, 'cache_in_case.py'], steps, {'CACHE_DATA': str(data)})
-                self.assertEqual(completed, len(steps), out)
-                self.assertEqual(code, 0, out)
-                self.assertEqual({item['id'] for item in json.loads((data/'selections.json').read_text())},
-                                 expected_ids)
-                self.assertFalse(list(data.rglob('*.zim')))
+    def test_kiwix_starter_from_guided_menu(self):
+        expected_ids = {'wikipedia_en_medicine_maxi', 'medlineplus.gov_en_all',
+                        'nhs.uk_en_medicines', 'ready.gov_en_all',
+                        'cd3wdproject.org_en_all', 'solar.lowtechmagazine.com_mul_all',
+                        'based.cooking_en_all'}
+        with tempfile.TemporaryDirectory() as temp:
+            data = Path(temp) / 'library'
+            steps = [('Choose an action:', b'starter\n'),
+                     ('Choose all, kiwix, survivor, or last-light [all]:', b'kiwix\n'),
+                     ('Download these selections now?', b'n\n')]
+            code, out, completed = run_pty_steps(
+                [sys.executable, 'cache_in_case.py'], steps, {'CACHE_DATA': str(data)})
+            self.assertEqual(completed, len(steps), out)
+            self.assertEqual(code, 0, out)
+            self.assertEqual({item['id'] for item in json.loads((data/'selections.json').read_text())},
+                             expected_ids)
+            self.assertFalse(list(data.rglob('*.zim')))
 
     def test_starter_defaults_to_all_sources_from_guided_menu(self):
         with tempfile.TemporaryDirectory() as temp:
@@ -315,7 +313,7 @@ class TerminalTests(unittest.TestCase):
                 [sys.executable, 'cache_in_case.py'], steps, {'CACHE_DATA': str(data)})
             self.assertEqual(completed, len(steps), out)
             self.assertEqual(code, 0, out)
-            self.assertIn('Recommended content from all three sources', out)
+            self.assertIn('The complete starter: all three sources', out)
             state = json.loads((data/'selections.json').read_text())
             self.assertEqual({item['source'] for item in state},
                              {'kiwix', 'survivor-file', 'last-light'})

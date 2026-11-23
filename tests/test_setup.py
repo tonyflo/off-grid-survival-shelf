@@ -380,12 +380,13 @@ class SetupIntegrationTests(unittest.TestCase):
 
     def test_menu_empty_topic_browses_without_asking_twice(self):
         self.stdin_tty.return_value = True
-        with patch('builtins.input', side_effect=['browse', 'kiwix', '']) as prompts, \
+        with patch('builtins.input', side_effect=['browse', 'kiwix', '', '']) as prompts, \
+             patch.object(app.kiwix, 'categories', return_value=[{'id':'wikipedia','title':'Wikipedia'}]), \
              patch.object(app.kiwix, 'search_page', return_value=([], False)) as search, \
              patch.object(app, 'select', return_value=[]):
             code, out = self.run_action(preview=True)
         self.assertEqual(code, 0, out)
-        self.assertEqual(prompts.call_count, 3)
+        self.assertEqual(prompts.call_count, 4)
         self.assertIn('press Enter to browse everything', str(prompts.call_args))
         search.assert_called_once_with('', count=-1)
 

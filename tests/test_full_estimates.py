@@ -12,13 +12,13 @@ app = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(app)
 
 
-def entry(name, date, size):
+def entry(name, date, size, category=''):
     length = '' if size is None else ' length="{}"'.format(size)
     return ('<entry><id>urn:{name}-{date}</id><name>{name}</name>'
-            '<title>{name}</title><updated>{date}</updated><flavour></flavour>'
+            '<title>{name}</title><updated>{date}</updated><flavour></flavour><category>{category}</category>'
             '<link type="application/x-zim" rel="http://opds-spec.org/acquisition/open-access" '
             'href="https://download.kiwix.org/zim/{name}_{date}.zim.meta4"{length}/></entry>'
-            .format(name=name, date=date, length=length))
+            .format(name=name, date=date, length=length, category=category))
 
 
 def feed(total, entries):
@@ -55,6 +55,32 @@ class FullEstimateTests(unittest.TestCase):
                  contextlib.redirect_stdout(io.StringIO()) as out:
                 app.show_full_library_estimate('kiwix')
             self.assertIn('size: unavailable', out.getvalue())
+
+    def test_kiwix_category_estimate_filters_and_excludes_map_index(self):
+        requests = []
+        def fetch(url):
+            params = parse_qs(urlsplit(url).query)
+            requests.append(params)
+            return feed(1, [entry('one', '2026', 2000000000, 'wikipedia')])
+        with patch.object(app.kiwix, '_fetch', side_effect=fetch), \
+             patch.object(app.kiwix, '_maps') as maps, contextlib.redirect_stdout(io.StringIO()) as out:
+            app.show_full_library_estimate('kiwix', category='wikipedia')
+        maps.assert_not_called()
+        self.assertEqual(requests[0]['category'], ['wikipedia'])
+        self.assertIn('Estimated Kiwix category: ~2.0 GB', out.getvalue())
+
+    def test_empty_kiwix_category_is_not_saved_or_confirmed(self):
+        with patch.object(app, 'ARGS', ['kiwix', 'all', 'wikipedia']), \
+             patch.object(app, 'PREVIEW', True), \
+             patch.object(app.sys.stdin, 'isatty', return_value=True), \
+             patch.object(app.kiwix, 'categories', return_value=[{'id':'wikipedia','title':'Wikipedia'}]), \
+             patch.object(app.kiwix, 'catalog_pages', return_value=iter(())), \
+             patch.object(app, 'remember') as remember, patch.object(app, 'confirm') as confirm, \
+             contextlib.redirect_stdout(io.StringIO()) as out:
+            self.assertEqual(app.run(), 0)
+        self.assertIn('No English downloads found', out.getvalue())
+        confirm.assert_not_called()
+        remember.assert_not_called()
 
     def test_survivor_uses_saved_sizes_and_labels_unknown_books(self):
         saved = {'survivor': [{'size': 2000000000}, {'size': 1000000000}, {}]}
